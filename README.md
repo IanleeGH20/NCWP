@@ -1,4 +1,4 @@
-# NCWP: Neighborhood Context Word Prediction
+# NCWP: Neighbour-contrastive whitening projection
 
 This repository implements the full NCWP pipeline: from corpus labeling to decoder-only model training, and finally to NCWP (PCA-whitening) evaluation.
 
