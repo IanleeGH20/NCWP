@@ -1,0 +1,8 @@
+{"model": "qwen-4b", "config": "fit=50000 r=40 whiten=True minimal=True tau=0.0", "r": 40, "positive": "random", "k": null, "ndcg": 43.494, "std": 0.0903}
+{"model": "qwen-4b", "config": "fit=50000 r=40 whiten=True minimal=True tau=0.0", "r": 40, "positive": "noise", "k": null, "ndcg": 40.501, "std": 0.0426}
+{"model": "qwen-4b", "config": "fit=50000 r=40 whiten=True minimal=True tau=0.0", "r": 40, "positive": "knn", "k": 1, "ndcg": 54.9756, "std": 0.1685, "gap_vs_random": 11.4816}
+{"model": "qwen-4b", "config": "fit=50000 r=40 whiten=True minimal=True tau=0.0", "r": 40, "positive": "knn", "k": 5, "ndcg": 55.9544, "std": 0.1226, "gap_vs_random": 12.4603}
+{"model": "qwen-4b", "config": "fit=50000 r=80 whiten=True minimal=True tau=0.0", "r": 80, "positive": "random", "k": null, "ndcg": 56.911, "std": 0.1637}
+{"model": "qwen-4b", "config": "fit=50000 r=80 whiten=True minimal=True tau=0.0", "r": 80, "positive": "noise", "k": null, "ndcg": 50.0401, "std": 0.0905}
+{"model": "qwen-4b", "config": "fit=50000 r=80 whiten=True minimal=True tau=0.0", "r": 80, "positive": "knn", "k": 1, "ndcg": 60.4438, "std": 0.0566, "gap_vs_random": 3.5328}
+{"model": "qwen-4b", "config": "fit=50000 r=80 whiten=True minimal=True tau=0.0", "r": 80, "positive": "knn", "k": 5, "ndcg": 60.302, "std": 0.0675, "gap_vs_random": 3.3911}

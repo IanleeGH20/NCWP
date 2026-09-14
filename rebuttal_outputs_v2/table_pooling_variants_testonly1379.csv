@@ -1,0 +1,79 @@
+dataset,split,model_nickname,hf_model_id,embedding_type,method,pooling,r,seed,fit_size,eval_size,metric_name,metric_value,notes,std_if_available
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Base_mean_pool,mean,2560,"[0, 1, 2]",2910,1379,spearman_x100,31.2669,full dim,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Mean_PCA_whitening,mean,40,"[0, 1, 2]",2910,1379,spearman_x100,40.4606,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Mean_ZCA_shrink,mean,40,"[0, 1, 2]",2910,1379,spearman_x100,38.2091,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,mean,40,"[0, 1, 2]",2910,1379,spearman_x100,48.4942,ncwp_ref,0.084
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Mean_PCA_whitening,mean,80,"[0, 1, 2]",2910,1379,spearman_x100,46.0225,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Mean_ZCA_shrink,mean,80,"[0, 1, 2]",2910,1379,spearman_x100,42.4555,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,mean,80,"[0, 1, 2]",2910,1379,spearman_x100,52.317,ncwp_ref,1.1127
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Mean_PCA_whitening,mean,160,"[0, 1, 2]",2910,1379,spearman_x100,49.8986,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Mean_ZCA_shrink,mean,160,"[0, 1, 2]",2910,1379,spearman_x100,47.6223,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,mean,160,"[0, 1, 2]",2910,1379,spearman_x100,53.692,ncwp_ref,0.6121
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Mean_PCA_whitening,mean,320,"[0, 1, 2]",2910,1379,spearman_x100,51.9104,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Mean_ZCA_shrink,mean,320,"[0, 1, 2]",2910,1379,spearman_x100,51.2631,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,mean,320,"[0, 1, 2]",2910,1379,spearman_x100,55.0505,ncwp_ref,0.0775
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,Base_last_token_pool,last,2560,"[0, 1, 2]",2910,1379,spearman_x100,28.7375,full dim,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LastToken_PCA_whitening,last,40,"[0, 1, 2]",2910,1379,spearman_x100,36.682,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LastToken_ZCA_shrink,last,40,"[0, 1, 2]",2910,1379,spearman_x100,44.6232,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,NCWP_on_last_token,last,40,"[0, 1, 2]",2910,1379,spearman_x100,45.1337,ncwp_ref,0.2647
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LastToken_PCA_whitening,last,80,"[0, 1, 2]",2910,1379,spearman_x100,44.3022,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LastToken_ZCA_shrink,last,80,"[0, 1, 2]",2910,1379,spearman_x100,51.0563,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,NCWP_on_last_token,last,80,"[0, 1, 2]",2910,1379,spearman_x100,48.4628,ncwp_ref,0.5243
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LastToken_PCA_whitening,last,160,"[0, 1, 2]",2910,1379,spearman_x100,49.1212,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LastToken_ZCA_shrink,last,160,"[0, 1, 2]",2910,1379,spearman_x100,54.5847,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,NCWP_on_last_token,last,160,"[0, 1, 2]",2910,1379,spearman_x100,51.48,ncwp_ref,0.6572
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LastToken_PCA_whitening,last,320,"[0, 1, 2]",2910,1379,spearman_x100,52.3827,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LastToken_ZCA_shrink,last,320,"[0, 1, 2]",2910,1379,spearman_x100,56.3881,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,NCWP_on_last_token,last,320,"[0, 1, 2]",2910,1379,spearman_x100,53.2021,ncwp_ref,0.2089
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Base_mean_pool,mean,3584,"[0, 1, 2]",2910,1379,spearman_x100,39.2705,full dim,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Mean_PCA_whitening,mean,56,"[0, 1, 2]",2910,1379,spearman_x100,46.0982,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Mean_ZCA_shrink,mean,56,"[0, 1, 2]",2910,1379,spearman_x100,46.1911,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,NCWP_mean_pool,mean,56,"[0, 1, 2]",2910,1379,spearman_x100,53.6336,ncwp_ref,0.3178
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Mean_PCA_whitening,mean,112,"[0, 1, 2]",2910,1379,spearman_x100,51.1851,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Mean_ZCA_shrink,mean,112,"[0, 1, 2]",2910,1379,spearman_x100,49.1535,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,NCWP_mean_pool,mean,112,"[0, 1, 2]",2910,1379,spearman_x100,56.9184,ncwp_ref,0.2743
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Mean_PCA_whitening,mean,224,"[0, 1, 2]",2910,1379,spearman_x100,53.8616,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Mean_ZCA_shrink,mean,224,"[0, 1, 2]",2910,1379,spearman_x100,52.2709,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,NCWP_mean_pool,mean,224,"[0, 1, 2]",2910,1379,spearman_x100,57.7783,ncwp_ref,0.7212
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Mean_PCA_whitening,mean,448,"[0, 1, 2]",2910,1379,spearman_x100,55.2432,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Mean_ZCA_shrink,mean,448,"[0, 1, 2]",2910,1379,spearman_x100,55.0719,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,NCWP_mean_pool,mean,448,"[0, 1, 2]",2910,1379,spearman_x100,58.1378,ncwp_ref,0.3114
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,Base_last_token_pool,last,3584,"[0, 1, 2]",2910,1379,spearman_x100,37.3663,full dim,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,LastToken_PCA_whitening,last,56,"[0, 1, 2]",2910,1379,spearman_x100,47.3359,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,LastToken_ZCA_shrink,last,56,"[0, 1, 2]",2910,1379,spearman_x100,53.6003,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,NCWP_on_last_token,last,56,"[0, 1, 2]",2910,1379,spearman_x100,58.0435,ncwp_ref,1.2397
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,LastToken_PCA_whitening,last,112,"[0, 1, 2]",2910,1379,spearman_x100,52.649,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,LastToken_ZCA_shrink,last,112,"[0, 1, 2]",2910,1379,spearman_x100,58.7142,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,NCWP_on_last_token,last,112,"[0, 1, 2]",2910,1379,spearman_x100,59.2797,ncwp_ref,0.3853
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,LastToken_PCA_whitening,last,224,"[0, 1, 2]",2910,1379,spearman_x100,56.6707,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,LastToken_ZCA_shrink,last,224,"[0, 1, 2]",2910,1379,spearman_x100,60.2636,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,NCWP_on_last_token,last,224,"[0, 1, 2]",2910,1379,spearman_x100,61.4143,ncwp_ref,0.3424
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,LastToken_PCA_whitening,last,448,"[0, 1, 2]",2910,1379,spearman_x100,59.7458,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,LastToken_ZCA_shrink,last,448,"[0, 1, 2]",2910,1379,spearman_x100,61.5702,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,NCWP_on_last_token,last,448,"[0, 1, 2]",2910,1379,spearman_x100,62.0267,ncwp_ref,0.3244
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Base_mean_pool,mean,4096,"[0, 1, 2]",2910,1379,spearman_x100,45.9012,full dim,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Mean_PCA_whitening,mean,32,"[0, 1, 2]",2910,1379,spearman_x100,42.6328,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Mean_ZCA_shrink,mean,32,"[0, 1, 2]",2910,1379,spearman_x100,50.2826,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,mean,32,"[0, 1, 2]",2910,1379,spearman_x100,55.9002,ncwp_ref,0.2692
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Mean_PCA_whitening,mean,64,"[0, 1, 2]",2910,1379,spearman_x100,49.2874,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Mean_ZCA_shrink,mean,64,"[0, 1, 2]",2910,1379,spearman_x100,56.2312,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,mean,64,"[0, 1, 2]",2910,1379,spearman_x100,59.581,ncwp_ref,1.0366
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Mean_PCA_whitening,mean,128,"[0, 1, 2]",2910,1379,spearman_x100,53.6576,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Mean_ZCA_shrink,mean,128,"[0, 1, 2]",2910,1379,spearman_x100,58.6392,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,mean,128,"[0, 1, 2]",2910,1379,spearman_x100,60.3911,ncwp_ref,0.2278
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Mean_PCA_whitening,mean,256,"[0, 1, 2]",2910,1379,spearman_x100,56.781,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Mean_ZCA_shrink,mean,256,"[0, 1, 2]",2910,1379,spearman_x100,61.4609,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,mean,256,"[0, 1, 2]",2910,1379,spearman_x100,62.0913,ncwp_ref,0.2257
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,Base_last_token_pool,last,4096,"[0, 1, 2]",2910,1379,spearman_x100,39.4278,full dim,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LastToken_PCA_whitening,last,32,"[0, 1, 2]",2910,1379,spearman_x100,43.8305,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LastToken_ZCA_shrink,last,32,"[0, 1, 2]",2910,1379,spearman_x100,59.8657,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,NCWP_on_last_token,last,32,"[0, 1, 2]",2910,1379,spearman_x100,59.1289,ncwp_ref,0.3694
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LastToken_PCA_whitening,last,64,"[0, 1, 2]",2910,1379,spearman_x100,50.8379,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LastToken_ZCA_shrink,last,64,"[0, 1, 2]",2910,1379,spearman_x100,63.9615,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,NCWP_on_last_token,last,64,"[0, 1, 2]",2910,1379,spearman_x100,61.7786,ncwp_ref,0.5623
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LastToken_PCA_whitening,last,128,"[0, 1, 2]",2910,1379,spearman_x100,55.3981,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LastToken_ZCA_shrink,last,128,"[0, 1, 2]",2910,1379,spearman_x100,65.406,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,NCWP_on_last_token,last,128,"[0, 1, 2]",2910,1379,spearman_x100,63.6903,ncwp_ref,0.064
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LastToken_PCA_whitening,last,256,"[0, 1, 2]",2910,1379,spearman_x100,60.0243,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LastToken_ZCA_shrink,last,256,"[0, 1, 2]",2910,1379,spearman_x100,65.9684,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,NCWP_on_last_token,last,256,"[0, 1, 2]",2910,1379,spearman_x100,64.9231,ncwp_ref,0.2489

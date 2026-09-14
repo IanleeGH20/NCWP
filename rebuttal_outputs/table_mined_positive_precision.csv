@@ -1,0 +1,19 @@
+dataset,split,model_nickname,hf_model_id,embedding_type,method,space,k,tau,gold_threshold,seed,fit_size,eval_size,metric_name,metric_value,recall_at_k,anchor_hit_rate,notes,r
+stsb,eval_all_sents,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,mined_positive_precision,raw_mean_pool,10,0.0,>=4.0,0,2910,12861,precision@k,0.0761,0.7409,0.7471,n_anchors=3330,
+stsb,eval_all_sents,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,mined_positive_precision,ZCA-whitened,10,0.0,>=4.0,0,2910,12861,precision@k,0.0959,0.9327,0.9357,n_anchors=3330,
+stsb,eval_all_sents,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,mined_positive_precision,NCWP-projected,10,0.0,>=4.0,0,2910,12861,precision@k,0.0861,0.8371,0.8408,n_anchors=3330,80.0
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,mined_positive_precision,raw_mean_pool,10,0.0,,0,2000,10000,precision@k,0.0678,0.527,0.585,query->corpus NN vs gold duplicates (qrels),
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,mined_positive_precision,ZCA-whitened,10,0.0,,0,2000,10000,precision@k,0.1061,0.7991,0.851,query->corpus NN vs gold duplicates (qrels),
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,mined_positive_precision,NCWP-projected,10,0.0,,0,2000,10000,precision@k,0.0875,0.6719,0.7321,query->corpus NN vs gold duplicates (qrels),80.0
+stsb,eval_all_sents,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,mined_positive_precision,raw_mean_pool,10,0.0,>=4.0,0,2910,12861,precision@k,0.0892,0.8678,0.8718,n_anchors=3330,
+stsb,eval_all_sents,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,mined_positive_precision,ZCA-whitened,10,0.0,>=4.0,0,2910,12861,precision@k,0.0981,0.9534,0.9556,n_anchors=3330,
+stsb,eval_all_sents,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,mined_positive_precision,NCWP-projected,10,0.0,>=4.0,0,2910,12861,precision@k,0.0925,0.8995,0.9033,n_anchors=3330,80.0
+quora,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,mined_positive_precision,raw_mean_pool,10,0.0,,0,1000,10000,precision@k,0.0823,0.6317,0.6912,query->corpus NN vs gold duplicates (qrels),
+quora,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,mined_positive_precision,ZCA-whitened,10,0.0,,0,1000,10000,precision@k,0.1105,0.826,0.8747,query->corpus NN vs gold duplicates (qrels),
+quora,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,mined_positive_precision,NCWP-projected,10,0.0,,0,1000,10000,precision@k,0.0933,0.7104,0.767,query->corpus NN vs gold duplicates (qrels),80.0
+stsb,eval_all_sents,qwen-8b,Qwen/Qwen2-7B,mean_pool,mined_positive_precision,raw_mean_pool,10,0.0,>=4.0,0,2910,12861,precision@k,0.0758,0.7387,0.7447,n_anchors=3330,
+stsb,eval_all_sents,qwen-8b,Qwen/Qwen2-7B,mean_pool,mined_positive_precision,ZCA-whitened,10,0.0,>=4.0,0,2910,12861,precision@k,0.0964,0.9383,0.9408,n_anchors=3330,
+stsb,eval_all_sents,qwen-8b,Qwen/Qwen2-7B,mean_pool,mined_positive_precision,NCWP-projected,10,0.0,>=4.0,0,2910,12861,precision@k,0.089,0.8676,0.8724,n_anchors=3330,80.0
+quora,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,mined_positive_precision,raw_mean_pool,10,0.0,,0,1000,10000,precision@k,0.0623,0.4864,0.5448,query->corpus NN vs gold duplicates (qrels),
+quora,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,mined_positive_precision,ZCA-whitened,10,0.0,,0,1000,10000,precision@k,0.1066,0.8036,0.8566,query->corpus NN vs gold duplicates (qrels),
+quora,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,mined_positive_precision,NCWP-projected,10,0.0,,0,1000,10000,precision@k,0.0887,0.6767,0.7352,query->corpus NN vs gold duplicates (qrels),80.0

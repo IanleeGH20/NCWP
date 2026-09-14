@@ -1,0 +1,12 @@
+variant,r=20,r=80,r=320
+Random-pairs,43.5,49.89,50.0
+No hard-neg,25.99,26.46,26.92
+No memory bank,28.32,27.9,27.43
+No-QR (final),27.18,25.44,24.87
+No refinement,38.62,39.67,41.18
+Full-NCWP-with-QR,41.33,50.73,53.75
+PCA-whitening,32.08,42.92,48.74
+Soft-White,27.58,37.31,44.0
+Random,25.93,30.37,30.93
+LPP,14.2,20.01,26.15
+ZCA-only,33.12,42.51,48.42

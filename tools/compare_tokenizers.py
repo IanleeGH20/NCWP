@@ -5,6 +5,7 @@ from typing import Tuple
 
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.backends.backend_pdf import PdfPages
 
 
 def _read_training_summary(weights_dir: str) -> pd.DataFrame:
@@ -45,8 +46,8 @@ def _build_rankings(df_bpe: pd.DataFrame, df_wp: pd.DataFrame) -> pd.DataFrame:
     return stacked[cols].reset_index(drop=True)
 
 
-def _plot_val_vs_dim(df: pd.DataFrame, out_png: str, title: str) -> None:
-    plt.figure(figsize=(8, 5))
+def _plot_val_vs_dim(df: pd.DataFrame, out_pdf: str, title: str) -> None:
+    fig = plt.figure(figsize=(8, 5))
     plt.plot(df["dim"], df["best_val_bpe"], marker="o", label="BPE best_val")
     plt.plot(df["dim"], df["best_val_wp"], marker="s", label="WordPiece best_val")
     plt.xlabel("Dimension")
@@ -55,7 +56,8 @@ def _plot_val_vs_dim(df: pd.DataFrame, out_png: str, title: str) -> None:
     plt.grid(True, linestyle="--", alpha=0.4)
     plt.legend()
     plt.tight_layout()
-    plt.savefig(out_png, dpi=160)
+    with PdfPages(out_pdf) as pdf:
+        pdf.savefig(fig, bbox_inches="tight")
     plt.close()
 
 
@@ -75,9 +77,9 @@ def run_compare(
     out_rank_csv = os.path.join(out_dir, "tokenizer_rankings.csv")
     df_rank.to_csv(out_rank_csv, index=False)
 
-    out_png = os.path.join(out_dir, "val_loss_vs_dim.png")
-    _plot_val_vs_dim(df, out_png, "Validation Loss vs Dimension — BPE vs WordPiece")
-    return df, df_rank, out_csv, out_rank_csv, out_png
+    out_pdf = os.path.join(out_dir, "val_loss_vs_dim.pdf")
+    _plot_val_vs_dim(df, out_pdf, "Validation Loss vs Dimension — BPE vs WordPiece")
+    return df, df_rank, out_csv, out_rank_csv, out_pdf
 
 
 def build_parser() -> argparse.ArgumentParser:

@@ -1,0 +1,4 @@
+nickname,hf_model_id,hidden_dim,layer,pooling,max_length,dtype,fit_size_stsb,fit_size_quora,note
+qwen-4b,Qwen/Qwen1.5-4B,2560,last_hidden_state,mean,128,bfloat16,2910,2000,"Qwen-4B = Qwen1.5-4B, Qwen-8B = Qwen2-7B (NOT Qwen2.5; fix citation)"
+qwen-8b,Qwen/Qwen2-7B,3584,last_hidden_state,mean,128,bfloat16,2910,1000,"Qwen-4B = Qwen1.5-4B, Qwen-8B = Qwen2-7B (NOT Qwen2.5; fix citation)"
+llama-8b,meta-llama/Meta-Llama-3.1-8B,4096,last_hidden_state,mean,128,bfloat16,2910,1000,

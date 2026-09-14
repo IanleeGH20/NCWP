@@ -1,0 +1,53 @@
+dataset,split,model_nickname,hf_model_id,embedding_type,method,layer_name,layer_idx,pooling,r,seed,fit_size,eval_size,metric_name,metric_value,notes,std_if_available
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LayerSelect_last_mean_Base,last,40,mean,2560,"[0, 1, 2]",2910,1379,spearman_x100,31.2623,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LayerSelect_last_last_Base,last,40,last,2560,"[0, 1, 2]",2910,1379,spearman_x100,28.807,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LayerSelect_second_last_mean_Base,second_last,39,mean,2560,"[0, 1, 2]",2910,1379,spearman_x100,36.6342,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LayerSelect_second_last_last_Base,second_last,39,last,2560,"[0, 1, 2]",2910,1379,spearman_x100,28.8778,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LayerSelect_middle_mean_Base,middle,20,mean,2560,"[0, 1, 2]",2910,1379,spearman_x100,13.9156,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LayerSelect_middle_last_Base,middle,20,last,2560,"[0, 1, 2]",2910,1379,spearman_x100,32.906,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LayerSelect_early_middle_mean_Base,early_middle,13,mean,2560,"[0, 1, 2]",2910,1379,spearman_x100,16.3062,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LayerSelect_early_middle_last_Base,early_middle,13,last,2560,"[0, 1, 2]",2910,1379,spearman_x100,29.5052,,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LayerSelect_last_mean_NCWP,last,40,mean,40,"[0, 1, 2]",2910,1379,spearman_x100,49.5046,ncwp_ref (reference),0.4958
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LayerSelect_last_mean_NCWP,last,40,mean,80,"[0, 1, 2]",2910,1379,spearman_x100,52.0934,ncwp_ref (reference),0.1745
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LayerSelect_last_mean_NCWP,last,40,mean,160,"[0, 1, 2]",2910,1379,spearman_x100,53.6643,ncwp_ref (reference),0.375
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LayerSelect_last_mean_NCWP,last,40,mean,320,"[0, 1, 2]",2910,1379,spearman_x100,55.1934,ncwp_ref (reference),0.6432
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LayerSelect_second_last_mean_NCWP,second_last,39,mean,40,"[0, 1, 2]",2910,1379,spearman_x100,51.2408,ncwp_ref (second_last),0.3692
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LayerSelect_second_last_mean_NCWP,second_last,39,mean,80,"[0, 1, 2]",2910,1379,spearman_x100,54.3322,ncwp_ref (second_last),0.6853
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LayerSelect_second_last_mean_NCWP,second_last,39,mean,160,"[0, 1, 2]",2910,1379,spearman_x100,55.3745,ncwp_ref (second_last),0.6286
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LayerSelect_second_last_mean_NCWP,second_last,39,mean,320,"[0, 1, 2]",2910,1379,spearman_x100,56.845,ncwp_ref (second_last),0.1711
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LayerSelect_last_mean_Base,last,28,mean,3584,"[0, 1, 2]",2910,1379,spearman_x100,39.2402,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,LayerSelect_last_last_Base,last,28,last,3584,"[0, 1, 2]",2910,1379,spearman_x100,37.4085,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LayerSelect_second_last_mean_Base,second_last,27,mean,3584,"[0, 1, 2]",2910,1379,spearman_x100,38.8545,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,LayerSelect_second_last_last_Base,second_last,27,last,3584,"[0, 1, 2]",2910,1379,spearman_x100,43.4751,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LayerSelect_middle_mean_Base,middle,14,mean,3584,"[0, 1, 2]",2910,1379,spearman_x100,17.9258,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,LayerSelect_middle_last_Base,middle,14,last,3584,"[0, 1, 2]",2910,1379,spearman_x100,42.0111,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LayerSelect_early_middle_mean_Base,early_middle,9,mean,3584,"[0, 1, 2]",2910,1379,spearman_x100,17.9326,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,LayerSelect_early_middle_last_Base,early_middle,9,last,3584,"[0, 1, 2]",2910,1379,spearman_x100,36.1934,,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LayerSelect_last_mean_NCWP,last,28,mean,56,"[0, 1, 2]",2910,1379,spearman_x100,53.8284,ncwp_ref (reference),1.1622
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LayerSelect_last_mean_NCWP,last,28,mean,112,"[0, 1, 2]",2910,1379,spearman_x100,56.1431,ncwp_ref (reference),0.6205
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LayerSelect_last_mean_NCWP,last,28,mean,224,"[0, 1, 2]",2910,1379,spearman_x100,57.6252,ncwp_ref (reference),0.7273
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LayerSelect_last_mean_NCWP,last,28,mean,448,"[0, 1, 2]",2910,1379,spearman_x100,58.428,ncwp_ref (reference),0.1967
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LayerSelect_second_last_mean_NCWP,second_last,27,mean,56,"[0, 1, 2]",2910,1379,spearman_x100,55.9797,ncwp_ref (second_last),0.9969
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LayerSelect_second_last_mean_NCWP,second_last,27,mean,112,"[0, 1, 2]",2910,1379,spearman_x100,58.5606,ncwp_ref (second_last),0.2079
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LayerSelect_second_last_mean_NCWP,second_last,27,mean,224,"[0, 1, 2]",2910,1379,spearman_x100,59.9206,ncwp_ref (second_last),0.505
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LayerSelect_second_last_mean_NCWP,second_last,27,mean,448,"[0, 1, 2]",2910,1379,spearman_x100,61.1188,ncwp_ref (second_last),0.1176
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,LayerSelect_second_last_last_NCWP,second_last,27,last,56,"[0, 1, 2]",2910,1379,spearman_x100,55.8683,ncwp_ref (best_base),0.5439
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,LayerSelect_second_last_last_NCWP,second_last,27,last,112,"[0, 1, 2]",2910,1379,spearman_x100,58.7159,ncwp_ref (best_base),0.8109
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,LayerSelect_second_last_last_NCWP,second_last,27,last,224,"[0, 1, 2]",2910,1379,spearman_x100,59.6515,ncwp_ref (best_base),0.3856
+stsb,test,qwen-8b,Qwen/Qwen2-7B,last_pool,LayerSelect_second_last_last_NCWP,second_last,27,last,448,"[0, 1, 2]",2910,1379,spearman_x100,61.2703,ncwp_ref (best_base),0.5864
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LayerSelect_last_mean_Base,last,32,mean,4096,"[0, 1, 2]",2910,1379,spearman_x100,45.9235,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LayerSelect_last_last_Base,last,32,last,4096,"[0, 1, 2]",2910,1379,spearman_x100,39.4098,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LayerSelect_second_last_mean_Base,second_last,31,mean,4096,"[0, 1, 2]",2910,1379,spearman_x100,35.1232,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LayerSelect_second_last_last_Base,second_last,31,last,4096,"[0, 1, 2]",2910,1379,spearman_x100,42.8524,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LayerSelect_middle_mean_Base,middle,16,mean,4096,"[0, 1, 2]",2910,1379,spearman_x100,20.4377,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LayerSelect_middle_last_Base,middle,16,last,4096,"[0, 1, 2]",2910,1379,spearman_x100,37.5448,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LayerSelect_early_middle_mean_Base,early_middle,10,mean,4096,"[0, 1, 2]",2910,1379,spearman_x100,17.8816,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LayerSelect_early_middle_last_Base,early_middle,10,last,4096,"[0, 1, 2]",2910,1379,spearman_x100,37.7354,,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LayerSelect_last_mean_NCWP,last,32,mean,32,"[0, 1, 2]",2910,1379,spearman_x100,56.1892,ncwp_ref (reference),1.1276
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LayerSelect_last_mean_NCWP,last,32,mean,64,"[0, 1, 2]",2910,1379,spearman_x100,59.4819,ncwp_ref (reference),0.5149
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LayerSelect_last_mean_NCWP,last,32,mean,128,"[0, 1, 2]",2910,1379,spearman_x100,61.0487,ncwp_ref (reference),0.2496
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LayerSelect_last_mean_NCWP,last,32,mean,256,"[0, 1, 2]",2910,1379,spearman_x100,61.8413,ncwp_ref (reference),0.3315
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LayerSelect_second_last_mean_NCWP,second_last,31,mean,32,"[0, 1, 2]",2910,1379,spearman_x100,56.2287,ncwp_ref (second_last),0.3052
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LayerSelect_second_last_mean_NCWP,second_last,31,mean,64,"[0, 1, 2]",2910,1379,spearman_x100,59.5434,ncwp_ref (second_last),0.6711
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LayerSelect_second_last_mean_NCWP,second_last,31,mean,128,"[0, 1, 2]",2910,1379,spearman_x100,61.6978,ncwp_ref (second_last),0.3256
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LayerSelect_second_last_mean_NCWP,second_last,31,mean,256,"[0, 1, 2]",2910,1379,spearman_x100,63.1721,ncwp_ref (second_last),0.3719

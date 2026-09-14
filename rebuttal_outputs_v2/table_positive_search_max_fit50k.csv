@@ -1,0 +1,13 @@
+model,config,r,positive,k,ndcg,std,gap_vs_random
+qwen-4b,fit=50000 r=20 whiten=True minimal=False tau=0.0,20,random,,23.2325,0.1064,
+qwen-4b,fit=50000 r=20 whiten=True minimal=False tau=0.0,20,noise,,23.7488,0.1183,
+qwen-4b,fit=50000 r=20 whiten=True minimal=False tau=0.0,20,knn,1.0,43.4187,0.1526,20.1862
+qwen-4b,fit=50000 r=20 whiten=True minimal=False tau=0.0,20,knn,5.0,44.4375,0.1664,21.205
+qwen-4b,fit=50000 r=40 whiten=True minimal=False tau=0.0,40,random,,43.5442,0.1868,
+qwen-4b,fit=50000 r=40 whiten=True minimal=False tau=0.0,40,noise,,41.8522,0.3043,
+qwen-4b,fit=50000 r=40 whiten=True minimal=False tau=0.0,40,knn,1.0,54.9328,0.1226,11.3887
+qwen-4b,fit=50000 r=40 whiten=True minimal=False tau=0.0,40,knn,5.0,55.1012,0.199,11.5571
+qwen-4b,fit=50000 r=80 whiten=True minimal=False tau=0.0,80,random,,57.5711,0.1688,
+qwen-4b,fit=50000 r=80 whiten=True minimal=False tau=0.0,80,noise,,53.7067,0.1086,
+qwen-4b,fit=50000 r=80 whiten=True minimal=False tau=0.0,80,knn,1.0,60.707,0.0695,3.136
+qwen-4b,fit=50000 r=80 whiten=True minimal=False tau=0.0,80,knn,5.0,60.4796,0.1299,2.9085

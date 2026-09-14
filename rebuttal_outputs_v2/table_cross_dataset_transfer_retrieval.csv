@@ -1,0 +1,21 @@
+train_dataset,test_dataset,model_nickname,hf_model_id,method,r,seed,metric_name,metric_value,drop_vs_refit,still_above_base,notes
+Quora,Quora,qwen-4b,Qwen/Qwen1.5-4B,NCWP_refit,80,"[0, 1, 2]",ndcg@10,56.7996,0.0,True,base=43.70
+STS-B,Quora,qwen-4b,Qwen/Qwen1.5-4B,NCWP_transfer,80,"[0, 1, 2]",ndcg@10,50.5174,6.2822,True,base=43.70
+STS-B,STS-B,qwen-4b,Qwen/Qwen1.5-4B,NCWP_refit,80,"[0, 1, 2]",spearman_x100,53.961,0.0,True,base=36.48
+Quora,STS-B,qwen-4b,Qwen/Qwen1.5-4B,NCWP_transfer,80,"[0, 1, 2]",spearman_x100,47.0734,6.8876,True,base=36.48
+cqa-english,cqa-english,qwen-4b,Qwen/Qwen1.5-4B,NCWP_refit,80,"[0, 1, 2]",ndcg@10,7.4631,0.0,True,base=3.75
+Quora,cqa-english,qwen-4b,Qwen/Qwen1.5-4B,NCWP_transfer,80,"[0, 1, 2]",ndcg@10,8.077,-0.614,True,base=3.75
+cqa-gaming,cqa-gaming,qwen-4b,Qwen/Qwen1.5-4B,NCWP_refit,80,"[0, 1, 2]",ndcg@10,5.9498,0.0,False,base=6.33
+Quora,cqa-gaming,qwen-4b,Qwen/Qwen1.5-4B,NCWP_transfer,80,"[0, 1, 2]",ndcg@10,10.1,-4.1502,True,base=6.33
+cqa-physics,cqa-physics,qwen-4b,Qwen/Qwen1.5-4B,NCWP_refit,80,"[0, 1, 2]",ndcg@10,6.857,0.0,False,base=7.17
+Quora,cqa-physics,qwen-4b,Qwen/Qwen1.5-4B,NCWP_transfer,80,"[0, 1, 2]",ndcg@10,11.5912,-4.7343,True,base=7.17
+Quora,Quora,llama-8b,meta-llama/Meta-Llama-3.1-8B,NCWP_refit,80,"[0, 1, 2]",ndcg@10,60.0772,0.0,True,base=52.83
+STS-B,Quora,llama-8b,meta-llama/Meta-Llama-3.1-8B,NCWP_transfer,80,"[0, 1, 2]",ndcg@10,55.3643,4.7129,True,base=52.83
+STS-B,STS-B,llama-8b,meta-llama/Meta-Llama-3.1-8B,NCWP_refit,80,"[0, 1, 2]",spearman_x100,60.7698,0.0,True,base=46.35
+Quora,STS-B,llama-8b,meta-llama/Meta-Llama-3.1-8B,NCWP_transfer,80,"[0, 1, 2]",spearman_x100,51.1875,9.5823,True,base=46.35
+cqa-english,cqa-english,llama-8b,meta-llama/Meta-Llama-3.1-8B,NCWP_refit,80,"[0, 1, 2]",ndcg@10,7.9231,0.0,True,base=3.88
+Quora,cqa-english,llama-8b,meta-llama/Meta-Llama-3.1-8B,NCWP_transfer,80,"[0, 1, 2]",ndcg@10,6.8732,1.0499,True,base=3.88
+cqa-gaming,cqa-gaming,llama-8b,meta-llama/Meta-Llama-3.1-8B,NCWP_refit,80,"[0, 1, 2]",ndcg@10,7.3222,0.0,True,base=5.68
+Quora,cqa-gaming,llama-8b,meta-llama/Meta-Llama-3.1-8B,NCWP_transfer,80,"[0, 1, 2]",ndcg@10,9.034,-1.7118,True,base=5.68
+cqa-physics,cqa-physics,llama-8b,meta-llama/Meta-Llama-3.1-8B,NCWP_refit,80,"[0, 1, 2]",ndcg@10,8.0789,0.0,False,base=8.63
+Quora,cqa-physics,llama-8b,meta-llama/Meta-Llama-3.1-8B,NCWP_transfer,80,"[0, 1, 2]",ndcg@10,12.4087,-4.3298,True,base=8.63

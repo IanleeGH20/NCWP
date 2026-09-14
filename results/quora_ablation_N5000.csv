@@ -1,0 +1,7 @@
+variant,r=20,r=80,r=320
+Random-pairs,23.19,57.54,65.37
+No hard-neg,34.83,47.28,48.42
+No memory bank,36.34,57.7,62.13
+No-QR (final),36.44,57.37,60.65
+No refinement,36.44,57.37,60.65
+Full-NCWP-with-QR,34.92,55.84,62.27

@@ -1,4 +1,4 @@
-torch>=2.2.0
+# torch is pre-installed in the base image (pytorch/pytorch)
 transformers>=4.44.0
 huggingface_hub>=0.24.0
 scikit-learn>=1.3.0

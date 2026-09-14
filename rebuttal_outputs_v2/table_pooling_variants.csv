@@ -1,0 +1,79 @@
+dataset,split,model_nickname,hf_model_id,embedding_type,method,pooling,r,seed,fit_size,eval_size,metric_name,metric_value,notes,std_if_available
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Base_mean_pool,mean,2560,"[0, 1, 2]",2910,7128,spearman_x100,36.4468,full dim,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Mean_PCA_whitening,mean,40,"[0, 1, 2]",2910,7128,spearman_x100,40.7707,,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Mean_ZCA_shrink,mean,40,"[0, 1, 2]",2910,7128,spearman_x100,41.8125,,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,mean,40,"[0, 1, 2]",2910,7128,spearman_x100,50.5696,ncwp_ref,0.32
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Mean_PCA_whitening,mean,80,"[0, 1, 2]",2910,7128,spearman_x100,46.453,,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Mean_ZCA_shrink,mean,80,"[0, 1, 2]",2910,7128,spearman_x100,46.1424,,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,mean,80,"[0, 1, 2]",2910,7128,spearman_x100,54.2519,ncwp_ref,0.0518
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Mean_PCA_whitening,mean,160,"[0, 1, 2]",2910,7128,spearman_x100,50.8961,,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Mean_ZCA_shrink,mean,160,"[0, 1, 2]",2910,7128,spearman_x100,49.7493,,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,mean,160,"[0, 1, 2]",2910,7128,spearman_x100,55.6591,ncwp_ref,0.3134
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Mean_PCA_whitening,mean,320,"[0, 1, 2]",2910,7128,spearman_x100,53.352,,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Mean_ZCA_shrink,mean,320,"[0, 1, 2]",2910,7128,spearman_x100,52.8373,,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,mean,320,"[0, 1, 2]",2910,7128,spearman_x100,56.4916,ncwp_ref,0.4888
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,Base_last_token_pool,last,2560,"[0, 1, 2]",2910,7128,spearman_x100,27.3229,full dim,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LastToken_PCA_whitening,last,40,"[0, 1, 2]",2910,7128,spearman_x100,33.737,,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LastToken_ZCA_shrink,last,40,"[0, 1, 2]",2910,7128,spearman_x100,45.2769,,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,NCWP_on_last_token,last,40,"[0, 1, 2]",2910,7128,spearman_x100,43.7302,ncwp_ref,0.4259
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LastToken_PCA_whitening,last,80,"[0, 1, 2]",2910,7128,spearman_x100,40.6091,,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LastToken_ZCA_shrink,last,80,"[0, 1, 2]",2910,7128,spearman_x100,50.201,,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,NCWP_on_last_token,last,80,"[0, 1, 2]",2910,7128,spearman_x100,45.6604,ncwp_ref,0.5682
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LastToken_PCA_whitening,last,160,"[0, 1, 2]",2910,7128,spearman_x100,45.7618,,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LastToken_ZCA_shrink,last,160,"[0, 1, 2]",2910,7128,spearman_x100,52.4989,,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,NCWP_on_last_token,last,160,"[0, 1, 2]",2910,7128,spearman_x100,48.4236,ncwp_ref,0.5355
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LastToken_PCA_whitening,last,320,"[0, 1, 2]",2910,7128,spearman_x100,49.3871,,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,LastToken_ZCA_shrink,last,320,"[0, 1, 2]",2910,7128,spearman_x100,53.2477,,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,last_pool,NCWP_on_last_token,last,320,"[0, 1, 2]",2910,7128,spearman_x100,50.2541,ncwp_ref,0.1616
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Base_mean_pool,mean,4096,"[0, 1, 2]",2910,7128,spearman_x100,46.3565,full dim,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Mean_PCA_whitening,mean,32,"[0, 1, 2]",2910,7128,spearman_x100,41.1125,,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Mean_ZCA_shrink,mean,32,"[0, 1, 2]",2910,7128,spearman_x100,51.1619,,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,mean,32,"[0, 1, 2]",2910,7128,spearman_x100,57.6801,ncwp_ref,0.6187
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Mean_PCA_whitening,mean,64,"[0, 1, 2]",2910,7128,spearman_x100,47.7746,,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Mean_ZCA_shrink,mean,64,"[0, 1, 2]",2910,7128,spearman_x100,55.7819,,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,mean,64,"[0, 1, 2]",2910,7128,spearman_x100,60.1027,ncwp_ref,0.384
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Mean_PCA_whitening,mean,128,"[0, 1, 2]",2910,7128,spearman_x100,52.768,,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Mean_ZCA_shrink,mean,128,"[0, 1, 2]",2910,7128,spearman_x100,56.5976,,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,mean,128,"[0, 1, 2]",2910,7128,spearman_x100,61.8775,ncwp_ref,0.107
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Mean_PCA_whitening,mean,256,"[0, 1, 2]",2910,7128,spearman_x100,56.842,,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Mean_ZCA_shrink,mean,256,"[0, 1, 2]",2910,7128,spearman_x100,59.6995,,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,mean,256,"[0, 1, 2]",2910,7128,spearman_x100,62.9319,ncwp_ref,0.2098
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,Base_last_token_pool,last,4096,"[0, 1, 2]",2910,7128,spearman_x100,34.5145,full dim,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LastToken_PCA_whitening,last,32,"[0, 1, 2]",2910,7128,spearman_x100,38.9962,,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LastToken_ZCA_shrink,last,32,"[0, 1, 2]",2910,7128,spearman_x100,55.0135,,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,NCWP_on_last_token,last,32,"[0, 1, 2]",2910,7128,spearman_x100,53.4466,ncwp_ref,0.6074
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LastToken_PCA_whitening,last,64,"[0, 1, 2]",2910,7128,spearman_x100,45.5918,,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LastToken_ZCA_shrink,last,64,"[0, 1, 2]",2910,7128,spearman_x100,57.625,,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,NCWP_on_last_token,last,64,"[0, 1, 2]",2910,7128,spearman_x100,56.0765,ncwp_ref,0.3612
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LastToken_PCA_whitening,last,128,"[0, 1, 2]",2910,7128,spearman_x100,50.3744,,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LastToken_ZCA_shrink,last,128,"[0, 1, 2]",2910,7128,spearman_x100,60.4314,,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,NCWP_on_last_token,last,128,"[0, 1, 2]",2910,7128,spearman_x100,58.3498,ncwp_ref,0.4698
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LastToken_PCA_whitening,last,256,"[0, 1, 2]",2910,7128,spearman_x100,54.8277,,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,LastToken_ZCA_shrink,last,256,"[0, 1, 2]",2910,7128,spearman_x100,61.3376,,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,last_pool,NCWP_on_last_token,last,256,"[0, 1, 2]",2910,7128,spearman_x100,59.4279,ncwp_ref,0.0727
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Base_mean_pool,mean,3584,"[0, 1, 2]",2910,7128,spearman_x100,37.9624,full dim,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Mean_PCA_whitening,mean,56,"[0, 1, 2]",2910,7128,spearman_x100,43.9445,,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Mean_ZCA_shrink,mean,56,"[0, 1, 2]",2910,7128,spearman_x100,46.6408,,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,NCWP_mean_pool,mean,56,"[0, 1, 2]",2910,7128,spearman_x100,55.525,ncwp_ref,0.1728
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Mean_PCA_whitening,mean,112,"[0, 1, 2]",2910,7128,spearman_x100,49.3487,,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Mean_ZCA_shrink,mean,112,"[0, 1, 2]",2910,7128,spearman_x100,49.3825,,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,NCWP_mean_pool,mean,112,"[0, 1, 2]",2910,7128,spearman_x100,57.465,ncwp_ref,0.4173
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Mean_PCA_whitening,mean,224,"[0, 1, 2]",2910,7128,spearman_x100,53.2141,,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Mean_ZCA_shrink,mean,224,"[0, 1, 2]",2910,7128,spearman_x100,52.9144,,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,NCWP_mean_pool,mean,224,"[0, 1, 2]",2910,7128,spearman_x100,58.2806,ncwp_ref,0.0543
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Mean_PCA_whitening,mean,448,"[0, 1, 2]",2910,7128,spearman_x100,55.5685,,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Mean_ZCA_shrink,mean,448,"[0, 1, 2]",2910,7128,spearman_x100,55.6261,,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,NCWP_mean_pool,mean,448,"[0, 1, 2]",2910,7128,spearman_x100,58.6827,ncwp_ref,0.1126
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,last_pool,Base_last_token_pool,last,3584,"[0, 1, 2]",2910,7128,spearman_x100,30.0493,full dim,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,last_pool,LastToken_PCA_whitening,last,56,"[0, 1, 2]",2910,7128,spearman_x100,41.7758,,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,last_pool,LastToken_ZCA_shrink,last,56,"[0, 1, 2]",2910,7128,spearman_x100,52.519,,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,last_pool,NCWP_on_last_token,last,56,"[0, 1, 2]",2910,7128,spearman_x100,52.1486,ncwp_ref,0.1247
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,last_pool,LastToken_PCA_whitening,last,112,"[0, 1, 2]",2910,7128,spearman_x100,46.9864,,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,last_pool,LastToken_ZCA_shrink,last,112,"[0, 1, 2]",2910,7128,spearman_x100,54.4423,,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,last_pool,NCWP_on_last_token,last,112,"[0, 1, 2]",2910,7128,spearman_x100,54.2446,ncwp_ref,0.2032
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,last_pool,LastToken_PCA_whitening,last,224,"[0, 1, 2]",2910,7128,spearman_x100,51.0949,,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,last_pool,LastToken_ZCA_shrink,last,224,"[0, 1, 2]",2910,7128,spearman_x100,55.8722,,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,last_pool,NCWP_on_last_token,last,224,"[0, 1, 2]",2910,7128,spearman_x100,54.9495,ncwp_ref,0.3391
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,last_pool,LastToken_PCA_whitening,last,448,"[0, 1, 2]",2910,7128,spearman_x100,54.1355,,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,last_pool,LastToken_ZCA_shrink,last,448,"[0, 1, 2]",2910,7128,spearman_x100,56.3635,,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,last_pool,NCWP_on_last_token,last,448,"[0, 1, 2]",2910,7128,spearman_x100,55.7706,ncwp_ref,0.1204

@@ -1,0 +1,10 @@
+dataset,source,split,n_test_examples,n_corpus_items,n_queries,fit_subset_size
+STSBenchmark,HF mteb/stsbenchmark-sts (MTEB),test,1379.0,-,-,2910
+STS12,MTEB STS12,test,,-,-,2910
+STS13,MTEB STS13,test,,-,-,2910
+STS14,MTEB STS14,test,,-,-,2910
+STS15,MTEB STS15,test,,-,-,2910
+STS16,MTEB STS16,test,,-,-,2910
+SICK-R,MTEB SICK-R,test,,-,-,2910
+BEIR-Quora,HF mteb/quora (BEIR),test,,522931,10000,1000-2000 corpus (per backbone)
+CQADupStack,HF BeIR/cqadupstack (BEIR),test,,per-subforum,per-subforum,per-subforum

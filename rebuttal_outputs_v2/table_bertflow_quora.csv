@@ -1,0 +1,16 @@
+dataset,split,model_nickname,hf_model_id,embedding_type,method,r,seed,fit_size,eval_size,metric_name,metric_value,std_if_available,per_seed,flow_blocks,flow_hidden,flow_nll_per_dim,notes
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,BERTflow_full,2560,"[0, 1, 2]",2000,10000,ndcg@10,64.7128,0.0267,"[64.6997, 64.75, 64.6887]",6,512,-5.1032,"glow-style flow, fixed perms; full D"
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,BERTflow_PCA_r,40,"[0, 1, 2]",2000,10000,ndcg@10,36.2925,0.2708,"[36.6606, 36.1998, 36.0171]",6,512,-5.1032,PCA top-r on flow latents
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,BERTflow_PCA_r,80,"[0, 1, 2]",2000,10000,ndcg@10,51.7862,0.1252,"[51.9334, 51.798, 51.6274]",6,512,-5.1032,PCA top-r on flow latents
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,BERTflow_PCA_r,160,"[0, 1, 2]",2000,10000,ndcg@10,59.9898,0.1144,"[60.1221, 60.0044, 59.843]",6,512,-5.1032,PCA top-r on flow latents
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,BERTflow_PCA_r,320,"[0, 1, 2]",2000,10000,ndcg@10,63.2835,0.0931,"[63.2293, 63.2068, 63.4145]",6,512,-5.1032,PCA top-r on flow latents
+quora,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,BERTflow_full,3584,"[0, 1, 2]",1000,10000,ndcg@10,64.0866,0.1755,"[64.1037, 64.2925, 63.8636]",6,512,-5.629,"glow-style flow, fixed perms; full D"
+quora,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,BERTflow_PCA_r,56,"[0, 1, 2]",1000,10000,ndcg@10,47.6638,0.064,"[47.7112, 47.5733, 47.7069]",6,512,-5.629,PCA top-r on flow latents
+quora,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,BERTflow_PCA_r,112,"[0, 1, 2]",1000,10000,ndcg@10,57.8546,0.1568,"[57.9762, 57.9545, 57.6332]",6,512,-5.629,PCA top-r on flow latents
+quora,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,BERTflow_PCA_r,224,"[0, 1, 2]",1000,10000,ndcg@10,62.153,0.2181,"[62.2533, 62.3553, 61.8502]",6,512,-5.629,PCA top-r on flow latents
+quora,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,BERTflow_PCA_r,448,"[0, 1, 2]",1000,10000,ndcg@10,64.0817,0.2385,"[64.1043, 64.3619, 63.7789]",6,512,-5.629,PCA top-r on flow latents
+quora,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,BERTflow_full,4096,"[0, 1, 2]",1000,10000,ndcg@10,66.6146,0.0675,"[66.5254, 66.6296, 66.6888]",6,512,-5.1989,"glow-style flow, fixed perms; full D"
+quora,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,BERTflow_PCA_r,32,"[0, 1, 2]",1000,10000,ndcg@10,37.1424,0.3359,"[36.7928, 37.5958, 37.0384]",6,512,-5.1989,PCA top-r on flow latents
+quora,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,BERTflow_PCA_r,64,"[0, 1, 2]",1000,10000,ndcg@10,53.0199,0.0997,"[52.9151, 52.9905, 53.154]",6,512,-5.1989,PCA top-r on flow latents
+quora,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,BERTflow_PCA_r,128,"[0, 1, 2]",1000,10000,ndcg@10,60.8575,0.164,"[60.8588, 60.656, 61.0577]",6,512,-5.1989,PCA top-r on flow latents
+quora,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,BERTflow_PCA_r,256,"[0, 1, 2]",1000,10000,ndcg@10,64.2979,0.25,"[64.0832, 64.162, 64.6485]",6,512,-5.1989,PCA top-r on flow latents

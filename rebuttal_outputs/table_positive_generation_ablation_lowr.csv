@@ -1,0 +1,25 @@
+dataset,split,model_nickname,hf_model_id,embedding_type,method,r,seed,fit_size,eval_size,metric_name,metric_value,std_if_available,notes
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_knn_positive,5,"[42, 43, 44]",2910,7128,spearman_x100,30.7841,0.0237,variant=full
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_knn_positive,10,"[42, 43, 44]",2910,7128,spearman_x100,40.3306,0.1647,variant=full
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_knn_positive,20,"[42, 43, 44]",2910,7128,spearman_x100,46.6856,0.7641,variant=full
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_noise_positive,5,"[42, 43, 44]",2910,7128,spearman_x100,32.8354,0.1413,variant=noise sigma=0.05
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_noise_positive,10,"[42, 43, 44]",2910,7128,spearman_x100,40.8147,0.1006,variant=noise sigma=0.05
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_noise_positive,20,"[42, 43, 44]",2910,7128,spearman_x100,47.4135,0.5119,variant=noise sigma=0.05
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_random_positive,5,"[42, 43, 44]",2910,7128,spearman_x100,34.0119,0.7913,variant=random_pairs
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_random_positive,10,"[42, 43, 44]",2910,7128,spearman_x100,41.6551,0.4391,variant=random_pairs
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_random_positive,20,"[42, 43, 44]",2910,7128,spearman_x100,47.6476,0.4742,variant=random_pairs
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_dropout_positive,5,"[42, 43, 44]",2910,7128,spearman_x100,,,not_applicable: frozen decoder-only inference dropout~0
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_dropout_positive,10,"[42, 43, 44]",2910,7128,spearman_x100,,,not_applicable: frozen decoder-only inference dropout~0
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_dropout_positive,20,"[42, 43, 44]",2910,7128,spearman_x100,,,not_applicable: frozen decoder-only inference dropout~0
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_knn_positive,5,"[42, 43, 44]",2000,10000,ndcg@10,0.48,0.0187,variant=full
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_knn_positive,10,"[42, 43, 44]",2000,10000,ndcg@10,6.9475,0.0493,variant=full
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_knn_positive,20,"[42, 43, 44]",2000,10000,ndcg@10,24.1184,0.3187,variant=full
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_noise_positive,5,"[42, 43, 44]",2000,10000,ndcg@10,0.4677,0.0147,variant=noise sigma=0.05
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_noise_positive,10,"[42, 43, 44]",2000,10000,ndcg@10,6.5028,0.1291,variant=noise sigma=0.05
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_noise_positive,20,"[42, 43, 44]",2000,10000,ndcg@10,23.7087,0.3395,variant=noise sigma=0.05
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_random_positive,5,"[42, 43, 44]",2000,10000,ndcg@10,0.4227,0.0275,variant=random_pairs
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_random_positive,10,"[42, 43, 44]",2000,10000,ndcg@10,6.8778,0.0597,variant=random_pairs
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_random_positive,20,"[42, 43, 44]",2000,10000,ndcg@10,24.571,0.2207,variant=random_pairs
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_dropout_positive,5,"[42, 43, 44]",2000,10000,ndcg@10,,,not_applicable: frozen decoder-only inference dropout~0
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_dropout_positive,10,"[42, 43, 44]",2000,10000,ndcg@10,,,not_applicable: frozen decoder-only inference dropout~0
+quora,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_dropout_positive,20,"[42, 43, 44]",2000,10000,ndcg@10,,,not_applicable: frozen decoder-only inference dropout~0
