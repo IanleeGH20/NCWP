@@ -1,14 +1,45 @@
-# NCWP: Neighbour-Contrastive Whitening Projection
+<h1 align="center">NCWP — Neighbor-Contrastive Whitening Projection</h1>
 
-Training-free, post-hoc dimensionality reduction for frozen decoder-only LLM
-embeddings. NCWP whitens the embedding space (ZCA-shrink) and learns an
-orthogonal projection with a **neighbour-contrastive** objective (kNN-mined
-positives + hard negatives), yielding compact embeddings that **outperform PCA /
-ZCA / Soft-whitening / Random / LPP at the same target dimension** on STS and
-BEIR retrieval, while requiring no gradient updates to the backbone.
+<p align="center">
+  <b>Make frozen decoder-only LLM hidden states retrieval-usable — no fine-tuning, no labeled pairs, just one post-hoc linear projection.</b>
+</p>
+
+<p align="center">
+  <img alt="Accepted at EMNLP 2026" src="https://img.shields.io/badge/EMNLP-2026-b31b1b">
+  <img alt="Python 3.10" src="https://img.shields.io/badge/python-3.10-blue">
+  <img alt="PyTorch 2.3" src="https://img.shields.io/badge/PyTorch-2.3-ee4c2c">
+</p>
+
+<p align="center">
+  🎉 <b>Accepted to EMNLP 2026</b> &nbsp;•&nbsp; 📄 Paper: <b><i>coming soon</i></b>
+</p>
+
+<p align="center">
+  <img src="figures/figure1_quora_example.png" alt="NCWP lifts the gold paraphrase from rank #1,034 to rank #1 on BEIR-Quora" width="840">
+</p>
+
+<p align="center">
+  <sub><i>One post-hoc linear projection at <b>32× compression</b> lifts the gold paraphrase from rank <b>#1,034 → #1</b> on BEIR-Quora — Qwen1.5-4B frozen, no labeled pairs.</i></sub>
+</p>
+
+---
+
+**NCWP** is a label-free, post-hoc alignment method for **symmetric
+sentence-similarity retrieval** on frozen decoder-only LLMs. It whitens the
+embedding space (ZCA-shrink) and learns a single orthogonal projection with a
+**neighbor-contrastive** objective (kNN-mined positives + hard negatives),
+yielding compact embeddings that **outperform PCA / ZCA / Soft-whitening /
+Random / LPP at the same target dimension** on STS and BEIR retrieval — with the
+backbone fully frozen and no gradient updates.
+
+Across three decoder-only backbones (Llama-3.1-8B, Qwen1.5-4B, Qwen2-7B), NCWP
+even **exceeds the raw Base hidden states** at aggressive compression — e.g.
+**+23.8 Spearman** at 8× on STSBenchmark and **+13.6 nDCG@10** at 32× on
+BEIR-Quora over Qwen1.5-4B Base — delivering retrieval-quality gains and
+index-size reductions at the same time.
 
 This repository contains the code and reference result tables to reproduce the
-EMNLP submission and its rebuttal experiments.
+EMNLP 2026 paper and its rebuttal experiments.
 
 > **Note on data & weights.** Model weights (Qwen / Llama), HuggingFace dataset
 > caches, and pre-computed embeddings/projectors are **not** stored in git (see
@@ -106,7 +137,29 @@ python multiseed_runner.py --dataset sts --model qwen-4b --dim 320 --seed 42
 
 ---
 
-## 4. Reproducing the main paper experiments
+## 4. Reproducing the camera-ready result tables
+
+The **headline tables** (STSBenchmark official test + BEIR-Quora, all three
+backbones, mean ± std over seeds `{42,43,44}`) are reproduced by the rebuttal
+package (§5):
+
+| Camera-ready table(s) | Command | Reference output |
+|---|---|---|
+| STS official test — Tables 1, 6, 7, 8 | `python -m rebuttal.run_sts_testonly --models qwen-4b qwen-8b llama-8b` | `rebuttal_outputs/table_stsb_testonly_1379.csv` |
+| BEIR-Quora — Tables 2, 9, 10, 11 | `python -m rebuttal.run_quora_corpus_sample --models qwen-4b qwen-8b llama-8b --basename table_quora_corpus_sample_mainN` | `rebuttal_outputs/table_quora_corpus_sample_mainN.csv` |
+
+Both use seeds `{42,43,44}` and per-model fit sizes by default (Quora: 2,000
+items for `qwen-4b`, 1,000 for `qwen-8b`/`llama-8b`).
+
+> **Reproducibility level.** Closed-form baselines and all retrieval (nDCG@10)
+> results are **bit-exactly** reproducible; NCWP's learned projection carries
+> small GPU floating-point non-determinism that is invisible on nDCG@10 but
+> visible on the 1,379-pair STS Spearman, where re-runs stay **within the
+> reported per-seed std** — hence the mean ± std reporting. Full table→command
+> map, determinism notes, and a worked verification:
+> [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md).
+
+### Supporting analyses
 
 The mapping below mirrors `docs/EXPERIMENTS_SUMMARY.md`.
 
@@ -155,7 +208,7 @@ Other rebuttal runners: `run_abtt.py`, `run_bertflow.py`, `run_cqadupstack.py`,
 `run_cross_dataset.py`, `run_sts_suite.py` (STS12–16 + SICK-R),
 `run_positive_ablation.py` / `run_positive_search.py` (positive-generation
 study), `run_regularizer_ablation.py`, `run_mined_precision.py`,
-`run_reproducibility.py`, `run_config_audit.py`. See `rebuttal/REBUTTAL_PLAN.md`.
+`run_reproducibility.py`, `run_config_audit.py`.
 
 Reference outputs are in `rebuttal_outputs/` and `rebuttal_outputs_v2/`
 (`*.csv` / `*.jsonl`), with a human-readable summary in
