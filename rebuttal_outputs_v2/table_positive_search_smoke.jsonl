@@ -1,4 +1,0 @@
-{"model": "qwen-4b", "config": "fit=3000 r=80 whiten=True minimal=False tau=0.0", "positive": "random", "k": null, "ndcg": 57.598, "std": 0.0}
-{"model": "qwen-4b", "config": "fit=3000 r=80 whiten=True minimal=False tau=0.0", "positive": "noise", "k": null, "ndcg": 57.0878, "std": 0.0}
-{"model": "qwen-4b", "config": "fit=3000 r=80 whiten=True minimal=False tau=0.0", "positive": "knn", "k": 1, "ndcg": 57.0565, "std": 0.0, "gap_vs_random": -0.5415}
-{"model": "qwen-4b", "config": "fit=3000 r=80 whiten=True minimal=False tau=0.0", "positive": "knn", "k": 10, "ndcg": 57.9553, "std": 0.0, "gap_vs_random": 0.3573}

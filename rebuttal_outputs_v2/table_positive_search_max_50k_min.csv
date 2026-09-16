@@ -1,9 +1,0 @@
-model,config,r,positive,k,ndcg,std,gap_vs_random
-qwen-4b,fit=50000 r=40 whiten=True minimal=True tau=0.0,40,random,,43.494,0.0903,
-qwen-4b,fit=50000 r=40 whiten=True minimal=True tau=0.0,40,noise,,40.501,0.0426,
-qwen-4b,fit=50000 r=40 whiten=True minimal=True tau=0.0,40,knn,1.0,54.9756,0.1685,11.4816
-qwen-4b,fit=50000 r=40 whiten=True minimal=True tau=0.0,40,knn,5.0,55.9544,0.1226,12.4603
-qwen-4b,fit=50000 r=80 whiten=True minimal=True tau=0.0,80,random,,56.911,0.1637,
-qwen-4b,fit=50000 r=80 whiten=True minimal=True tau=0.0,80,noise,,50.0401,0.0905,
-qwen-4b,fit=50000 r=80 whiten=True minimal=True tau=0.0,80,knn,1.0,60.4438,0.0566,3.5328
-qwen-4b,fit=50000 r=80 whiten=True minimal=True tau=0.0,80,knn,5.0,60.302,0.0675,3.3911

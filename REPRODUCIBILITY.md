@@ -27,8 +27,8 @@ seed varies across the three-seed runs; this isolates NCWP's seed variance.
 
 | Camera-ready table(s) | Command | Reference output |
 |---|---|---|
-| STSBenchmark official test — Tables 1, 6, 7, 8 | `python -m rebuttal.run_sts_testonly --models qwen-4b qwen-8b llama-8b` | `rebuttal_outputs/table_stsb_testonly_1379.csv` |
-| BEIR-Quora — Tables 2, 9, 10, 11 | `python -m rebuttal.run_quora_corpus_sample --models qwen-4b qwen-8b llama-8b --basename table_quora_corpus_sample_mainN` | `rebuttal_outputs/table_quora_corpus_sample_mainN.csv` |
+| STSBenchmark official test — Tables 1, 6, 7, 8 | `python -m ncwp.run_sts_testonly --models qwen-4b qwen-8b llama-8b` | `results/table_stsb_testonly_1379.csv` |
+| BEIR-Quora — Tables 2, 9, 10, 11 | `python -m ncwp.run_quora_corpus_sample --models qwen-4b qwen-8b llama-8b --basename table_quora_corpus_sample_mainN` | `results/table_quora_corpus_sample_mainN.csv` |
 
 Fit sizes are per-model defaults: STS fits the 2,910 unique STSBenchmark
 validation sentences and evaluates on the 1,379 official test pairs; Quora fits
@@ -40,20 +40,17 @@ on the full 522,931-item corpus with all test queries.
 | Camera-ready content | Runner |
 |---|---|
 | Anisotropy diagnostics (Table 3 and App. D) | `run_t2_anisotropy.py` |
-| PromptEOL / Echo + NCWP (Table 4) | `python -m rebuttal.run_prompt_baselines --eval_split test` |
-| Pooling comparison (App. F) | `python -m rebuttal.run_pooling_variants --eval_split test` |
-| Layer selection + NCWP (App. F) | `python -m rebuttal.run_layer_ncwp_from_cache` |
-| Echo + whitening (App. F) | `python -m rebuttal.run_echo_whitening` |
+| PromptEOL / Echo + NCWP (Table 4) | `python -m ncwp.run_prompt_baselines --eval_split test` |
+| Pooling comparison (App. F) | `python -m ncwp.run_pooling_variants --eval_split test` |
+| Layer selection + NCWP (App. F) | `python -m ncwp.run_layer_ncwp_from_cache` |
+| Echo + whitening (App. F) | `python -m ncwp.run_echo_whitening` |
 | Component ablation (Table 5) | `python run_sts_ablation_unified.py` |
-| STS12–16 + SICK-R breadth | `python -m rebuttal.run_sts_suite` |
-| CQADupStack breadth | `python -m rebuttal.run_cqadupstack` |
-| Cross-corpus transfer | `python -m rebuttal.run_cross_dataset` |
-| Positive-source control | `python -m rebuttal.run_positive_ablation` |
-| Mined-positive precision | `python -m rebuttal.run_mined_precision` |
-| Soft-regularizer audit | `python -m rebuttal.run_regularizer_ablation` |
-
-`docs/EXPERIMENTS_SUMMARY.md` is the authoritative index for every experiment
-group and its output path.
+| STS12–16 + SICK-R breadth | `python -m ncwp.run_sts_suite` |
+| CQADupStack breadth | `python -m ncwp.run_cqadupstack` |
+| Cross-corpus transfer | `python -m ncwp.run_cross_dataset` |
+| Positive-source control | `python -m ncwp.run_positive_search` |
+| Mined-positive precision | `python -m ncwp.run_mined_precision` |
+| Soft-regularizer audit | `python -m ncwp.run_regularizer_ablation` |
 
 ---
 

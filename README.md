@@ -39,7 +39,7 @@ BEIR-Quora over Qwen1.5-4B Base — delivering retrieval-quality gains and
 index-size reductions at the same time.
 
 This repository contains the code and reference result tables to reproduce the
-EMNLP 2026 paper and its rebuttal experiments.
+EMNLP 2026 paper.
 
 > **Note on data & weights.** Model weights (Qwen / Llama), HuggingFace dataset
 > caches, and pre-computed embeddings/projectors are **not** stored in git (see
@@ -52,47 +52,46 @@ EMNLP 2026 paper and its rebuttal experiments.
 
 ```
 .
-├── Dockerfile, requirements.txt      # reproducible environment
-├── run_beir_experiment.py            # BEIR retrieval (Quora/NFCorpus/FiQA/SCIDOCS): Base/PCA/Soft-W/ZCA/Random/LPP/NCWP
-├── run_beir_small.py                 # lightweight BEIR (CQADupStack subsets)
-├── run_scifact_experiment.py         # SciFact retrieval
-├── run_sts_experiment.py             # STS suite (STS-B, SICK-R, MRPC, ...)
-├── run_sts_ablation*.py              # STS ablations (unified / scaling / v2)
-├── run_quora_ablation.py             # Quora fit-size ablation
-├── run_ablation.py, run_ablation_ext.py   # NCWP component ablations (paper trainer lives here)
-├── multiseed_runner.py               # multi-seed robustness (STS / Quora)
-├── run_sensitivity.py, run_timing.py, run_t2_anisotropy.py  # sensitivity / timing / anisotropy
-├── add_*.py, run_zca_missing.py, run_fill_missing.py, update_main_sts_ncwp.py, build_sts_full_embs.py
-│                                     # helper scripts to backfill / merge result tables
-├── make_figures.py, make_comparison_table.py, plot_*.py, merge_pdfs.py
-│                                     # figure / table generation
-├── launch_*.sh, run_all_*.sh, run_multiseed.sh, ...   # batch launchers
-├── tools/                            # cherry-pick examples, tokenizer comparison
-├── rebuttal/                         # rebuttal experiment package (see §5)
-├── results/                          # small reference-result CSVs (STS / Quora ablations, anisotropy)
-├── {quora,fiqa,nfcorpus,scidocs,sick,mrpc,cqa-*}_results/   # per-dataset reference CSVs
-├── rebuttal_outputs/, rebuttal_outputs_v2/                  # rebuttal reference tables (CSV/JSONL/MD)
-└── docs/                             # EXPERIMENTS_SUMMARY, paper source, reviews, instructions
+├── Dockerfile, requirements.txt        # reproducible environment
+├── README.md, REPRODUCIBILITY.md, LICENSE
+├── ncwp/                               # core method + experiment runners
+│   ├── common.py                       # data, whitening, evaluation, NCWP trainer utilities
+│   ├── ncwp_ref.py                     # NCWP trainer (ZCA-shrink + neighbor-contrastive projection)
+│   ├── run_sts_testonly.py             # STSBenchmark official test: Base/PCA/Soft-W/ZCA/NCWP
+│   ├── run_baselines_testonly.py       # STS Random / LPP baselines
+│   ├── run_abtt.py                     # ABTT / ABTT+PCA baseline (STS)
+│   ├── run_quora_corpus_sample.py      # BEIR-Quora: all baselines + NCWP
+│   ├── run_sts_suite.py                # STS12–16 + SICK-R breadth
+│   ├── run_cqadupstack.py              # CQADupStack breadth
+│   ├── run_cross_dataset.py            # cross-corpus transfer
+│   ├── run_prompt_baselines.py         # PromptEOL / Echo + NCWP-on-prompt
+│   ├── run_pooling_variants.py         # mean vs last-token pooling + NCWP
+│   ├── run_layer_ncwp_from_cache.py    # layer selection + NCWP
+│   ├── run_echo_whitening.py           # Echo + whitening (Echo+ZCA / Echo+PCA / NCWP-on-Echo)
+│   ├── run_positive_search.py          # positive-source control (kNN vs random, 50k fit)
+│   ├── run_mined_precision.py          # mined-positive precision vs gold labels
+│   ├── run_neighbor_score_dist.py      # mined-neighbor gold-score distribution
+│   ├── run_regularizer_ablation.py     # optional soft-regularizer audit
+│   └── run_failure_cases.py            # qualitative failure cases
+├── run_sts_ablation_unified.py         # component ablation (7,128 train+test pairs)
+├── run_t2_anisotropy.py                # anisotropy diagnostics
+├── figures/                            # paper figures
+└── results/                            # reference result tables (CSV / JSONL)
 ```
-
-`docs/EXPERIMENTS_SUMMARY.md` is the authoritative index mapping every
-experiment group to its runner script and output path.
 
 ### Backbone naming
 
-| nickname   | HF model                | hidden dim |
-|------------|-------------------------|-----------:|
-| `qwen-4b`  | `Qwen/Qwen1.5-4B`       | 2560 |
-| `qwen-8b`  | `Qwen/Qwen2-7B`         | 3584 |
-| `llama-8b` | `meta-llama/Llama-3.1-8B` | 4096 |
-| `e5-base`  | `intfloat/e5-base-v2`   | 768 |
-| `bge-base` | `BAAI/bge-base-en-v1.5` | 768 |
+| nickname   | HF model                    | hidden dim |
+|------------|-----------------------------|-----------:|
+| `qwen-4b`  | `Qwen/Qwen1.5-4B`           | 2560 |
+| `qwen-8b`  | `Qwen/Qwen2-7B`             | 3584 |
+| `llama-8b` | `meta-llama/Meta-Llama-3.1-8B` | 4096 |
 
 ---
 
 ## 2. Environment
 
-All experiments were run inside a single Docker container (8× RTX A6000,
+All experiments were run inside a single Docker container (RTX A6000,
 Python 3.10, PyTorch 2.3.0, CUDA 11.8).
 
 ```bash
@@ -100,127 +99,81 @@ Python 3.10, PyTorch 2.3.0, CUDA 11.8).
 docker build -t ncwp:cuda .
 
 # Run (mount this repo, provide HF token for gated Llama/Qwen)
-docker run -d --name ncwp_gpu --gpus all \
+docker run -d --name ncwp --gpus all \
     -v "$PWD":/workspace/NCWP \
     -e HF_TOKEN=hf_xxx \
     ncwp:cuda tail -f /dev/null
 
-docker exec -it ncwp_gpu bash
+docker exec -it ncwp bash
 cd /workspace/NCWP
 ```
 
 Or, without Docker:
 
 ```bash
-pip install -r requirements.txt   # torch must be installed separately (matching your CUDA)
+pip install -r requirements.txt   # install torch separately, matching your CUDA
 export HF_TOKEN=hf_xxx
 ```
 
 Datasets (MTEB / BEIR) are pulled via the `datasets` / `mteb` libraries on first
-run and cached under `~/.cache/huggingface`.
+run and cached under `~/.cache/huggingface`. Run all commands as modules from the
+repository root.
 
 ---
 
 ## 3. Quick start
 
 ```bash
-# BEIR-Quora, all methods, NCWP included (query-sample fit)
-python run_beir_experiment.py --dataset quora --model qwen-4b \
-    --fit_mode query_sample --fit_sample 3000
+# STSBenchmark official test — all methods, NCWP over 3 seeds
+python -m ncwp.run_sts_testonly --models qwen-4b
 
-# STS-B ablation (unified, eval on 7128 train+test pairs)
-python run_sts_ablation_unified.py --model qwen-4b
-
-# Multi-seed robustness
-python multiseed_runner.py --dataset sts --model qwen-4b --dim 320 --seed 42
+# BEIR-Quora — all methods, NCWP over 3 seeds
+python -m ncwp.run_quora_corpus_sample --models qwen-4b
 ```
 
 ---
 
-## 4. Reproducing the camera-ready result tables
+## 4. Reproducing the paper
 
-The **headline tables** (STSBenchmark official test + BEIR-Quora, all three
-backbones, mean ± std over seeds `{42,43,44}`) are reproduced by the rebuttal
-package (§5):
+All NCWP numbers are the mean ± std over seeds `{42, 43, 44}` (the script
+defaults). See [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) for the full
+table→command map and a worked verification.
 
-| Camera-ready table(s) | Command | Reference output |
+| Paper table(s) | Command | Reference output |
 |---|---|---|
-| STS official test — Tables 1, 6, 7, 8 | `python -m rebuttal.run_sts_testonly --models qwen-4b qwen-8b llama-8b` | `rebuttal_outputs/table_stsb_testonly_1379.csv` |
-| BEIR-Quora — Tables 2, 9, 10, 11 | `python -m rebuttal.run_quora_corpus_sample --models qwen-4b qwen-8b llama-8b --basename table_quora_corpus_sample_mainN` | `rebuttal_outputs/table_quora_corpus_sample_mainN.csv` |
-
-Both use seeds `{42,43,44}` and per-model fit sizes by default (Quora: 2,000
-items for `qwen-4b`, 1,000 for `qwen-8b`/`llama-8b`).
+| STS official test — Tables 1, 6–8 | `python -m ncwp.run_sts_testonly --models qwen-4b qwen-8b llama-8b` | `results/table_stsb_testonly_1379.csv` |
+| STS Random / LPP / ABTT rows | `python -m ncwp.run_baselines_testonly` · `python -m ncwp.run_abtt` | `results/table_baselines_testonly1379.csv`, `results/table_abtt_baseline.csv` |
+| BEIR-Quora — Tables 2, 9–11 | `python -m ncwp.run_quora_corpus_sample --models qwen-4b qwen-8b llama-8b --basename table_quora_corpus_sample_mainN` | `results/table_quora_corpus_sample_mainN.csv` |
+| Anisotropy diagnostics — Table 3 | `python run_t2_anisotropy.py` | `results/t2_anisotropy_results.csv` |
+| Component ablation — Table 5 | `python run_sts_ablation_unified.py` | `results/sts_ablation_unified_eval7128.csv` |
+| PromptEOL / Echo + NCWP — Table 4 | `python -m ncwp.run_prompt_baselines --eval_split test` | `results/table_prompt_baseline_stsb_testonly1379.csv` |
+| STS12–16 + SICK-R breadth | `python -m ncwp.run_sts_suite` | `results/table_sts_suite.csv` |
+| CQADupStack breadth | `python -m ncwp.run_cqadupstack` | `results/table_cqadupstack.csv` |
+| Cross-corpus transfer | `python -m ncwp.run_cross_dataset` | `results/table_cross_dataset_transfer_*.csv` |
+| Pooling comparison | `python -m ncwp.run_pooling_variants --eval_split test` | `results/table_pooling_variants_testonly1379.csv` |
+| Layer selection + NCWP | `python -m ncwp.run_layer_ncwp_from_cache` | `results/table_layer_selection_testonly1379.csv` |
+| Echo + whitening | `python -m ncwp.run_echo_whitening` | `results/table_echo_whitening_testonly1379.csv` |
+| Positive-source control (50k fit) | `python -m ncwp.run_positive_search` | `results/table_positive_search_max_fit50k.csv` |
+| Mined-positive precision | `python -m ncwp.run_mined_precision` | `results/table_mined_positive_precision.csv` |
+| Mined-neighbor score distribution | `python -m ncwp.run_neighbor_score_dist` | `results/table_sts_mined_neighbor_score_distribution.csv` |
+| Soft-regularizer audit | `python -m ncwp.run_regularizer_ablation` | `results/table_regularizer_ablation_lowr.csv` |
+| Qualitative failure cases | `python -m ncwp.run_failure_cases` | `results/mined_positive_failure_cases.csv` |
 
 > **Reproducibility level.** Closed-form baselines and all retrieval (nDCG@10)
 > results are **bit-exactly** reproducible; NCWP's learned projection carries
 > small GPU floating-point non-determinism that is invisible on nDCG@10 but
 > visible on the 1,379-pair STS Spearman, where re-runs stay **within the
-> reported per-seed std** — hence the mean ± std reporting. Full table→command
-> map, determinism notes, and a worked verification:
+> reported per-seed std** — hence the mean ± std reporting. Details:
 > [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md).
 
-### Supporting analyses
-
-The mapping below mirrors `docs/EXPERIMENTS_SUMMARY.md`.
-
-| # | Experiment | Command | Output |
-|---|---|---|---|
-| 1 | Multi-seed robustness (STS/Quora) | `bash launch_multiseed_priority1.sh` / `multiseed_runner.py --dataset {sts,quora} --model M --dim r --seed {42,43,44}` | `logs_v4/`, `quora_results/fit_query_sample/` |
-| 2 | Quora fit-size ablation | `python run_quora_ablation.py` | `results/quora_ablation_N*.csv` |
-| 3 | STS ablation | `python run_sts_ablation_unified.py` / `_scaling.py` | `results/sts_ablation_*.csv` |
-| 4 | Anisotropy analysis | `python run_t2_anisotropy.py` | `results/t2_anisotropy_results.csv` |
-| 5 | Quora sample efficiency | `bash run_sample_efficiency.sh` → `plot_sample_efficiency.py` | `quora_results/fit_query_sample/` |
-| 6 | Quora corpus-fit + e5/bge | `bash run_all_e5_bge.sh` | `quora_results/fit_corpus_sample/` |
-| 7 | NFCorpus / FiQA | `bash run_all_nfcorpus_fiqa.sh` | `nfcorpus_results/`, `fiqa_results/` |
-| 8 | SICK / MRPC / SCIDOCS | `bash run_all_sts.sh` | `sick_results/`, `mrpc_results/`, `scidocs_results/` |
-| 9 | CQADupStack | `bash run_all_cqa.sh` → `run_beir_small.py` | `cqa-*_results/` |
-| 10 | Timing / sensitivity | `bash run_all_sensitivity.sh`, `run_timing.py` | `quora_results/{timing,sensitivity}/` |
-| 11 | SciFact | `bash run_all_scifact.sh` → `run_scifact_experiment.py` | `scifact_results/` |
-
-Figures / comparison tables: `python make_figures.py`, `python make_comparison_table.py`.
-
----
-
-## 5. Reproducing the rebuttal experiments (`rebuttal/`)
-
-The rebuttal package shares a common utility module (`rebuttal/common.py`) and
-uses the **faithful published NCWP trainer** (`rebuttal/ncwp_ref.py`, copied
-verbatim from `run_ablation.py`). Run as modules from the repo root:
-
-```bash
-# BEIR-Quora, corpus-sample fitting (N=1000), all baselines + NCWP (3 seeds)
-python -m rebuttal.run_quora_corpus_sample --models qwen-4b qwen-8b llama-8b --seeds 42 43 44
-
-# PromptEOL / Echo training-free baselines + NCWP-on-prompt (STS-B test-only 1,379)
-python -m rebuttal.run_prompt_baselines --dataset sts --model qwen-4b qwen-8b llama-8b --seeds 0 1 2 --eval_split test
-
-# Pooling comparison (mean vs last-token) + whitening + NCWP (STS-B test-only 1,379)
-python -m rebuttal.run_pooling_variants --model qwen-4b qwen-8b llama-8b --seeds 0 1 2 --eval_split test
-
-# Layer selection: Base per {last, 2nd-last, middle, early} × {mean, last} + NCWP on last & 2nd-last
-python -m rebuttal.run_layer_ncwp_from_cache --model qwen-4b qwen-8b llama-8b --seeds 0 1 2
-
-# Echo + whitening-only baselines (Echo+ZCA full-D, Echo+PCA, NCWP-on-Echo)
-python -m rebuttal.run_echo_whitening --models qwen-4b qwen-8b llama-8b --seeds 0 1 2
-```
-
-Other rebuttal runners: `run_abtt.py`, `run_bertflow.py`, `run_cqadupstack.py`,
-`run_cross_dataset.py`, `run_sts_suite.py` (STS12–16 + SICK-R),
-`run_positive_ablation.py` / `run_positive_search.py` (positive-generation
-study), `run_regularizer_ablation.py`, `run_mined_precision.py`,
-`run_reproducibility.py`, `run_config_audit.py`.
-
-Reference outputs are in `rebuttal_outputs/` and `rebuttal_outputs_v2/`
-(`*.csv` / `*.jsonl`), with a human-readable summary in
-`rebuttal_outputs/ADDITIONAL_RESULTS_5tasks.md`.
-
 > **Tip.** On multi-GPU boxes, run heavy encoding and NCWP training in separate
-> processes (encode → cache → train from cache). Mixing a resident multi-billion
-> parameter backbone with NCWP training in one process can intermittently stall
-> the CUDA context; `run_layer_ncwp_from_cache.py` follows the decoupled pattern.
+> processes (encode → cache → train from cache). Mixing a resident
+> multi-billion-parameter backbone with NCWP training in one process can
+> intermittently stall the CUDA context; `run_layer_ncwp_from_cache.py` follows
+> the decoupled pattern.
 
 ---
 
-## 6. License
+## 5. License
 
 See [LICENSE](LICENSE).
