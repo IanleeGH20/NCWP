@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "NCWP: Neighbor-Contrastive Whitening Projection"
+abstract: >-
+  Label-free post-hoc alignment of frozen decoder-only LLM hidden states for
+  symmetric sentence-similarity retrieval. NCWP combines ZCA-shrink whitening
+  with augmentation-free neighbor-contrastive projection learning, requiring
+  only a single linear projection at inference.
+authors:
+  - family-names: Lee
+    given-names: GangHo
+    affiliation: "AI Graduate School, Gwangju Institute of Science and Technology"
+  - family-names: Lee
+    given-names: Yong-Gu
+    affiliation: "AI Graduate School, Gwangju Institute of Science and Technology"
+license: MIT
+repository-code: "https://github.com/IanleeGH20/NCWP"
+keywords:
+  - sentence embeddings
+  - retrieval
+  - whitening
+  - contrastive learning
+  - large language models
+preferred-citation:
+  type: conference-paper
+  title: >-
+    Label-Free Post-hoc Alignment of Frozen Decoder-Only LLM Hidden States for
+    Symmetric Sentence-Similarity Retrieval
+  authors:
+    - family-names: Lee
+      given-names: GangHo
+    - family-names: Lee
+      given-names: Yong-Gu
+  collection-title: >-
+    Proceedings of the 2026 Conference on Empirical Methods in Natural Language
+    Processing (EMNLP)
+  year: 2026
+  notes: "To appear"

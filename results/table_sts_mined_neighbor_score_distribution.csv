@@ -1,0 +1,13 @@
+dataset,split,model_nickname,hf_model_id,embedding_type,method,space,k,tau,seed,fit_size,eval_size,metric_name,metric_value,median,p25,p75,pct_ge_4_0,pct_ge_4_5,matched_pairs,notes,r
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,mined_neighbor_score_dist,Raw,10.0,0.0,0,2910,12861,mean_gold_sts_score,3.2497,3.4,2.5468,4.0,32.7854,14.6001,7726,k=10 tau=0.0,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,mined_neighbor_score_dist,ZCA-whitened,10.0,0.0,0,2910,12861,mean_gold_sts_score,3.2257,3.4,2.4,4.0,32.3696,14.7393,9858,k=10 tau=0.0,
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,mined_neighbor_score_dist,NCWP-projected,10.0,0.0,0,2910,12861,mean_gold_sts_score,3.3273,3.5,2.6,4.2,35.3637,16.6215,8110,k=10 tau=0.0 r_ncwp=80,80.0
+stsb,train+test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,mined_neighbor_score_dist,Random,,,0,2910,12861,mean_gold_sts_score,2.5782,2.9,1.25,3.7188,22.2222,10.4938,162,k=10 tau=0.0,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,mined_neighbor_score_dist,Raw,10.0,0.0,0,2910,12861,mean_gold_sts_score,3.2438,3.4,2.5,4.0,32.9412,14.7614,9010,k=10 tau=0.0,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,mined_neighbor_score_dist,ZCA-whitened,10.0,0.0,0,2910,12861,mean_gold_sts_score,3.2188,3.4,2.4,4.0,32.1197,14.5641,10162,k=10 tau=0.0,
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,mined_neighbor_score_dist,NCWP-projected,10.0,0.0,0,2910,12861,mean_gold_sts_score,3.3403,3.5,2.6,4.2,35.3137,16.3666,8719,k=10 tau=0.0 r_ncwp=80,80.0
+stsb,train+test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,mined_neighbor_score_dist,Random,,,0,2910,12861,mean_gold_sts_score,2.6051,3.0,1.4,3.7625,22.0238,10.119,168,k=10 tau=0.0,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,mined_neighbor_score_dist,Raw,10.0,0.0,0,2910,12861,mean_gold_sts_score,3.2398,3.4,2.5,4.0,32.7705,14.3265,7699,k=10 tau=0.0,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,mined_neighbor_score_dist,ZCA-whitened,10.0,0.0,0,2910,12861,mean_gold_sts_score,3.2279,3.4,2.4,4.0,32.3586,14.6012,9917,k=10 tau=0.0,
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,mined_neighbor_score_dist,NCWP-projected,10.0,0.0,0,2910,12861,mean_gold_sts_score,3.2962,3.4,2.6,4.2,34.3182,15.8962,8631,k=10 tau=0.0 r_ncwp=80,80.0
+stsb,train+test,qwen-8b,Qwen/Qwen2-7B,mean_pool,mined_neighbor_score_dist,Random,,,0,2910,12861,mean_gold_sts_score,2.5797,2.9,1.35,3.6562,21.9512,10.3659,164,k=10 tau=0.0,

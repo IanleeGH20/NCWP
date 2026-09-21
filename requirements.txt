@@ -1,0 +1,14 @@
+# torch is provided by the base image (pytorch/pytorch:2.3.0-cuda11.8-cudnn8-devel).
+# For a non-Docker install, install a CUDA-matched torch 2.3.x FIRST, then these.
+#
+# Versions are pinned to the set the paper was produced and verified with.
+# NOTE: transformers is capped below 5.0 on purpose — transformers>=5 requires
+# torch>=2.5 and would silently disable PyTorch on the torch-2.3 base image.
+transformers==4.44.0
+accelerate>=0.33.0            # required by device_map="auto" in AutoModel.from_pretrained
+huggingface_hub>=0.24.0,<1.0
+datasets>=2.20.0,<3.0
+numpy>=1.24.0,<2.0
+pandas>=2.0.0,<3.0
+scipy>=1.10.0
+tqdm>=4.66.0

@@ -1,0 +1,76 @@
+dataset,split,model_nickname,hf_model_id,embedding_type,method,r,seed,fit_size,eval_size,metric_name,metric_value,notes,std_if_available
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Base_mean_pool,2560,"[0, 1, 2]",2910,1379,spearman_x100,31.3107,paper Base (cached),
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,40,"[0, 1, 2]",2910,1379,spearman_x100,48.7052,ncwp_ref; new-seed reverify vs Table 1,0.3136
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,80,"[0, 1, 2]",2910,1379,spearman_x100,52.0257,ncwp_ref; new-seed reverify vs Table 1,0.8658
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,160,"[0, 1, 2]",2910,1379,spearman_x100,53.5949,ncwp_ref; new-seed reverify vs Table 1,0.1248
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,320,"[0, 1, 2]",2910,1379,spearman_x100,54.9641,ncwp_ref; new-seed reverify vs Table 1,0.3252
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,PromptEOL_A,PromptEOL_A,2560,"[0, 1, 2]",2910,1379,spearman_x100,60.2006,template=PromptEOL_A pool=last,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,PromptEOL_A,NCWP_on_PromptEOL,40,"[0, 1, 2]",2910,1379,spearman_x100,67.7148,ncwp_ref; template=PromptEOL_A pool=last,0.4808
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,PromptEOL_A,NCWP_on_PromptEOL,80,"[0, 1, 2]",2910,1379,spearman_x100,70.7383,ncwp_ref; template=PromptEOL_A pool=last,0.1625
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,PromptEOL_A,NCWP_on_PromptEOL,160,"[0, 1, 2]",2910,1379,spearman_x100,71.7929,ncwp_ref; template=PromptEOL_A pool=last,0.1812
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,PromptEOL_A,NCWP_on_PromptEOL,320,"[0, 1, 2]",2910,1379,spearman_x100,73.2202,ncwp_ref; template=PromptEOL_A pool=last,0.1011
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,PromptEOL_B,PromptEOL_B,2560,"[0, 1, 2]",2910,1379,spearman_x100,52.0729,template=PromptEOL_B pool=last,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,PromptEOL_B,NCWP_on_PromptEOL,40,"[0, 1, 2]",2910,1379,spearman_x100,66.3901,ncwp_ref; template=PromptEOL_B pool=last,0.8174
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,PromptEOL_B,NCWP_on_PromptEOL,80,"[0, 1, 2]",2910,1379,spearman_x100,69.1645,ncwp_ref; template=PromptEOL_B pool=last,0.1119
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,PromptEOL_B,NCWP_on_PromptEOL,160,"[0, 1, 2]",2910,1379,spearman_x100,70.8508,ncwp_ref; template=PromptEOL_B pool=last,0.2275
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,PromptEOL_B,NCWP_on_PromptEOL,320,"[0, 1, 2]",2910,1379,spearman_x100,71.5918,ncwp_ref; template=PromptEOL_B pool=last,0.3727
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,Echo_mean,Echo_mean,2560,"[0, 1, 2]",2910,1379,spearman_x100,42.9413,template=Echo pool=mean,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,Echo_mean,NCWP_on_Echo,40,"[0, 1, 2]",2910,1379,spearman_x100,58.2706,ncwp_ref; template=Echo pool=mean,1.0765
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,Echo_mean,NCWP_on_Echo,80,"[0, 1, 2]",2910,1379,spearman_x100,60.5394,ncwp_ref; template=Echo pool=mean,0.3645
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,Echo_mean,NCWP_on_Echo,160,"[0, 1, 2]",2910,1379,spearman_x100,62.7536,ncwp_ref; template=Echo pool=mean,0.3021
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,Echo_mean,NCWP_on_Echo,320,"[0, 1, 2]",2910,1379,spearman_x100,62.9433,ncwp_ref; template=Echo pool=mean,0.2952
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,Echo_last,Echo_last,2560,"[0, 1, 2]",2910,1379,spearman_x100,26.8983,template=Echo pool=last,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,Echo_last,NCWP_on_Echo,40,"[0, 1, 2]",2910,1379,spearman_x100,46.2914,ncwp_ref; template=Echo pool=last,1.0093
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,Echo_last,NCWP_on_Echo,80,"[0, 1, 2]",2910,1379,spearman_x100,48.8562,ncwp_ref; template=Echo pool=last,0.5991
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,Echo_last,NCWP_on_Echo,160,"[0, 1, 2]",2910,1379,spearman_x100,50.6135,ncwp_ref; template=Echo pool=last,0.45
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,Echo_last,NCWP_on_Echo,320,"[0, 1, 2]",2910,1379,spearman_x100,53.3769,ncwp_ref; template=Echo pool=last,0.6442
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Base_mean_pool,3584,"[0, 1, 2]",2910,1379,spearman_x100,39.2693,paper Base (cached),
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,NCWP_mean_pool,56,"[0, 1, 2]",2910,1379,spearman_x100,54.2406,ncwp_ref; new-seed reverify vs Table 1,0.8017
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,NCWP_mean_pool,112,"[0, 1, 2]",2910,1379,spearman_x100,55.6345,ncwp_ref; new-seed reverify vs Table 1,0.1386
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,NCWP_mean_pool,224,"[0, 1, 2]",2910,1379,spearman_x100,56.8191,ncwp_ref; new-seed reverify vs Table 1,0.6988
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,NCWP_mean_pool,448,"[0, 1, 2]",2910,1379,spearman_x100,57.9423,ncwp_ref; new-seed reverify vs Table 1,0.0165
+stsb,test,qwen-8b,Qwen/Qwen2-7B,PromptEOL_A,PromptEOL_A,3584,"[0, 1, 2]",2910,1379,spearman_x100,72.2815,template=PromptEOL_A pool=last,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,PromptEOL_A,NCWP_on_PromptEOL,56,"[0, 1, 2]",2910,1379,spearman_x100,76.0378,ncwp_ref; template=PromptEOL_A pool=last,0.2451
+stsb,test,qwen-8b,Qwen/Qwen2-7B,PromptEOL_A,NCWP_on_PromptEOL,112,"[0, 1, 2]",2910,1379,spearman_x100,77.3147,ncwp_ref; template=PromptEOL_A pool=last,0.414
+stsb,test,qwen-8b,Qwen/Qwen2-7B,PromptEOL_A,NCWP_on_PromptEOL,224,"[0, 1, 2]",2910,1379,spearman_x100,78.1497,ncwp_ref; template=PromptEOL_A pool=last,0.1248
+stsb,test,qwen-8b,Qwen/Qwen2-7B,PromptEOL_A,NCWP_on_PromptEOL,448,"[0, 1, 2]",2910,1379,spearman_x100,78.838,ncwp_ref; template=PromptEOL_A pool=last,0.2644
+stsb,test,qwen-8b,Qwen/Qwen2-7B,PromptEOL_B,PromptEOL_B,3584,"[0, 1, 2]",2910,1379,spearman_x100,39.587,template=PromptEOL_B pool=last,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,PromptEOL_B,NCWP_on_PromptEOL,56,"[0, 1, 2]",2910,1379,spearman_x100,67.117,ncwp_ref; template=PromptEOL_B pool=last,0.5377
+stsb,test,qwen-8b,Qwen/Qwen2-7B,PromptEOL_B,NCWP_on_PromptEOL,112,"[0, 1, 2]",2910,1379,spearman_x100,68.7882,ncwp_ref; template=PromptEOL_B pool=last,0.6353
+stsb,test,qwen-8b,Qwen/Qwen2-7B,PromptEOL_B,NCWP_on_PromptEOL,224,"[0, 1, 2]",2910,1379,spearman_x100,70.1335,ncwp_ref; template=PromptEOL_B pool=last,0.256
+stsb,test,qwen-8b,Qwen/Qwen2-7B,PromptEOL_B,NCWP_on_PromptEOL,448,"[0, 1, 2]",2910,1379,spearman_x100,70.3823,ncwp_ref; template=PromptEOL_B pool=last,0.0885
+stsb,test,qwen-8b,Qwen/Qwen2-7B,Echo_mean,Echo_mean,3584,"[0, 1, 2]",2910,1379,spearman_x100,50.3996,template=Echo pool=mean,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,Echo_mean,NCWP_on_Echo,56,"[0, 1, 2]",2910,1379,spearman_x100,64.2897,ncwp_ref; template=Echo pool=mean,0.3913
+stsb,test,qwen-8b,Qwen/Qwen2-7B,Echo_mean,NCWP_on_Echo,112,"[0, 1, 2]",2910,1379,spearman_x100,65.8874,ncwp_ref; template=Echo pool=mean,0.5248
+stsb,test,qwen-8b,Qwen/Qwen2-7B,Echo_mean,NCWP_on_Echo,224,"[0, 1, 2]",2910,1379,spearman_x100,66.797,ncwp_ref; template=Echo pool=mean,0.3704
+stsb,test,qwen-8b,Qwen/Qwen2-7B,Echo_mean,NCWP_on_Echo,448,"[0, 1, 2]",2910,1379,spearman_x100,66.7661,ncwp_ref; template=Echo pool=mean,0.2759
+stsb,test,qwen-8b,Qwen/Qwen2-7B,Echo_last,Echo_last,3584,"[0, 1, 2]",2910,1379,spearman_x100,31.8012,template=Echo pool=last,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,Echo_last,NCWP_on_Echo,56,"[0, 1, 2]",2910,1379,spearman_x100,52.0585,ncwp_ref; template=Echo pool=last,0.59
+stsb,test,qwen-8b,Qwen/Qwen2-7B,Echo_last,NCWP_on_Echo,112,"[0, 1, 2]",2910,1379,spearman_x100,54.122,ncwp_ref; template=Echo pool=last,0.6342
+stsb,test,qwen-8b,Qwen/Qwen2-7B,Echo_last,NCWP_on_Echo,224,"[0, 1, 2]",2910,1379,spearman_x100,55.4346,ncwp_ref; template=Echo pool=last,0.3631
+stsb,test,qwen-8b,Qwen/Qwen2-7B,Echo_last,NCWP_on_Echo,448,"[0, 1, 2]",2910,1379,spearman_x100,57.9427,ncwp_ref; template=Echo pool=last,0.1987
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Base_mean_pool,4096,"[0, 1, 2]",2910,1379,spearman_x100,45.888,paper Base (cached),
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,32,"[0, 1, 2]",2910,1379,spearman_x100,57.2418,ncwp_ref; new-seed reverify vs Table 1,0.4703
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,64,"[0, 1, 2]",2910,1379,spearman_x100,58.9434,ncwp_ref; new-seed reverify vs Table 1,0.6939
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,128,"[0, 1, 2]",2910,1379,spearman_x100,60.3897,ncwp_ref; new-seed reverify vs Table 1,0.7608
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,256,"[0, 1, 2]",2910,1379,spearman_x100,61.6471,ncwp_ref; new-seed reverify vs Table 1,0.4387
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,PromptEOL_A,PromptEOL_A,4096,"[0, 1, 2]",2910,1379,spearman_x100,72.2953,template=PromptEOL_A pool=last,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,PromptEOL_A,NCWP_on_PromptEOL,32,"[0, 1, 2]",2910,1379,spearman_x100,74.1589,ncwp_ref; template=PromptEOL_A pool=last,0.3524
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,PromptEOL_A,NCWP_on_PromptEOL,64,"[0, 1, 2]",2910,1379,spearman_x100,76.963,ncwp_ref; template=PromptEOL_A pool=last,0.5284
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,PromptEOL_A,NCWP_on_PromptEOL,128,"[0, 1, 2]",2910,1379,spearman_x100,78.4929,ncwp_ref; template=PromptEOL_A pool=last,0.4953
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,PromptEOL_A,NCWP_on_PromptEOL,256,"[0, 1, 2]",2910,1379,spearman_x100,79.5253,ncwp_ref; template=PromptEOL_A pool=last,0.1249
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,PromptEOL_B,PromptEOL_B,4096,"[0, 1, 2]",2910,1379,spearman_x100,53.8269,template=PromptEOL_B pool=last,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,PromptEOL_B,NCWP_on_PromptEOL,32,"[0, 1, 2]",2910,1379,spearman_x100,65.4573,ncwp_ref; template=PromptEOL_B pool=last,0.7342
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,PromptEOL_B,NCWP_on_PromptEOL,64,"[0, 1, 2]",2910,1379,spearman_x100,68.9953,ncwp_ref; template=PromptEOL_B pool=last,0.16
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,PromptEOL_B,NCWP_on_PromptEOL,128,"[0, 1, 2]",2910,1379,spearman_x100,70.7101,ncwp_ref; template=PromptEOL_B pool=last,0.3372
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,PromptEOL_B,NCWP_on_PromptEOL,256,"[0, 1, 2]",2910,1379,spearman_x100,71.8048,ncwp_ref; template=PromptEOL_B pool=last,0.3183
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,Echo_mean,Echo_mean,4096,"[0, 1, 2]",2910,1379,spearman_x100,57.3483,template=Echo pool=mean,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,Echo_mean,NCWP_on_Echo,32,"[0, 1, 2]",2910,1379,spearman_x100,61.6948,ncwp_ref; template=Echo pool=mean,0.3165
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,Echo_mean,NCWP_on_Echo,64,"[0, 1, 2]",2910,1379,spearman_x100,64.8536,ncwp_ref; template=Echo pool=mean,1.1091
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,Echo_mean,NCWP_on_Echo,128,"[0, 1, 2]",2910,1379,spearman_x100,67.3368,ncwp_ref; template=Echo pool=mean,0.5277
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,Echo_mean,NCWP_on_Echo,256,"[0, 1, 2]",2910,1379,spearman_x100,67.4712,ncwp_ref; template=Echo pool=mean,0.0758
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,Echo_last,Echo_last,4096,"[0, 1, 2]",2910,1379,spearman_x100,39.7447,template=Echo pool=last,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,Echo_last,NCWP_on_Echo,32,"[0, 1, 2]",2910,1379,spearman_x100,54.655,ncwp_ref; template=Echo pool=last,1.2992
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,Echo_last,NCWP_on_Echo,64,"[0, 1, 2]",2910,1379,spearman_x100,57.7024,ncwp_ref; template=Echo pool=last,0.1494
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,Echo_last,NCWP_on_Echo,128,"[0, 1, 2]",2910,1379,spearman_x100,60.8795,ncwp_ref; template=Echo pool=last,0.5972
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,Echo_last,NCWP_on_Echo,256,"[0, 1, 2]",2910,1379,spearman_x100,62.023,ncwp_ref; template=Echo pool=last,0.3409

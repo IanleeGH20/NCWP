@@ -1,0 +1,119 @@
+dataset,split,model_nickname,hf_model_id,embedding_type,method,r,fit_size,eval_size,metric_name,metric_value,notes,seed
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Base_mean_pool,2560,2910,1379,spearman_x100,31.3107,full dim; sanity check vs existing table,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_full,2560,2910,1379,spearman_x100,48.0572,m=5,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LPP,5,2910,1379,spearman_x100,14.3733,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Random,5,2910,1379,spearman_x100,22.9062,QR of Gaussian,42.0
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,5,2910,1379,spearman_x100,21.5319,m=5,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Soft_whitening_main,5,2910,1379,spearman_x100,15.2003,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LPP,10,2910,1379,spearman_x100,17.7745,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Random,10,2910,1379,spearman_x100,30.4671,QR of Gaussian,42.0
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,10,2910,1379,spearman_x100,28.1975,m=5,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Soft_whitening_main,10,2910,1379,spearman_x100,22.8632,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LPP,20,2910,1379,spearman_x100,24.2166,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Random,20,2910,1379,spearman_x100,31.8289,QR of Gaussian,42.0
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,20,2910,1379,spearman_x100,33.7456,m=5,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Soft_whitening_main,20,2910,1379,spearman_x100,33.4348,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LPP,40,2910,1379,spearman_x100,28.3594,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Random,40,2910,1379,spearman_x100,36.2351,QR of Gaussian,42.0
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,40,2910,1379,spearman_x100,37.8876,m=5,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Soft_whitening_main,40,2910,1379,spearman_x100,39.5569,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LPP,80,2910,1379,spearman_x100,30.323,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Random,80,2910,1379,spearman_x100,36.3135,QR of Gaussian,42.0
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,80,2910,1379,spearman_x100,40.9331,m=5,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Soft_whitening_main,80,2910,1379,spearman_x100,45.0567,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LPP,160,2910,1379,spearman_x100,31.9371,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Random,160,2910,1379,spearman_x100,37.7448,QR of Gaussian,42.0
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,160,2910,1379,spearman_x100,43.3761,m=5,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Soft_whitening_main,160,2910,1379,spearman_x100,49.0297,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LPP,320,2910,1379,spearman_x100,33.8405,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Random,320,2910,1379,spearman_x100,37.3392,QR of Gaussian,42.0
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,320,2910,1379,spearman_x100,44.9928,m=5,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Soft_whitening_main,320,2910,1379,spearman_x100,51.3834,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LPP,640,2910,1379,spearman_x100,35.7617,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Random,640,2910,1379,spearman_x100,38.3878,QR of Gaussian,42.0
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,640,2910,1379,spearman_x100,46.1846,m=5,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Soft_whitening_main,640,2910,1379,spearman_x100,53.2511,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,LPP,1280,2910,1379,spearman_x100,38.013,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Random,1280,2910,1379,spearman_x100,37.8081,QR of Gaussian,42.0
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,1280,2910,1379,spearman_x100,47.2703,m=5,
+stsb,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Soft_whitening_main,1280,2910,1379,spearman_x100,55.0948,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Base_mean_pool,3584,2910,1379,spearman_x100,39.2695,full dim; sanity check vs existing table,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,ABTT_full,3584,2910,1379,spearman_x100,48.7847,m=5,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LPP,7,2910,1379,spearman_x100,24.9174,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Random,7,2910,1379,spearman_x100,29.6998,QR of Gaussian,42.0
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,ABTT_PCA_r,7,2910,1379,spearman_x100,31.3304,m=5,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Soft_whitening_main,7,2910,1379,spearman_x100,22.7679,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LPP,14,2910,1379,spearman_x100,29.3492,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Random,14,2910,1379,spearman_x100,35.0006,QR of Gaussian,42.0
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,ABTT_PCA_r,14,2910,1379,spearman_x100,35.8425,m=5,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Soft_whitening_main,14,2910,1379,spearman_x100,32.1802,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LPP,28,2910,1379,spearman_x100,32.4698,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Random,28,2910,1379,spearman_x100,40.3987,QR of Gaussian,42.0
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,ABTT_PCA_r,28,2910,1379,spearman_x100,38.454,m=5,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Soft_whitening_main,28,2910,1379,spearman_x100,39.1709,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LPP,56,2910,1379,spearman_x100,34.8943,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Random,56,2910,1379,spearman_x100,40.3242,QR of Gaussian,42.0
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,ABTT_PCA_r,56,2910,1379,spearman_x100,41.5788,m=5,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Soft_whitening_main,56,2910,1379,spearman_x100,44.858,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LPP,112,2910,1379,spearman_x100,35.8437,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Random,112,2910,1379,spearman_x100,41.2927,QR of Gaussian,42.0
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,ABTT_PCA_r,112,2910,1379,spearman_x100,43.7943,m=5,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Soft_whitening_main,112,2910,1379,spearman_x100,49.8793,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LPP,224,2910,1379,spearman_x100,37.0393,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Random,224,2910,1379,spearman_x100,40.3244,QR of Gaussian,42.0
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,ABTT_PCA_r,224,2910,1379,spearman_x100,45.2565,m=5,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Soft_whitening_main,224,2910,1379,spearman_x100,52.9175,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LPP,448,2910,1379,spearman_x100,37.9884,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Random,448,2910,1379,spearman_x100,40.5319,QR of Gaussian,42.0
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,ABTT_PCA_r,448,2910,1379,spearman_x100,46.3135,m=5,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Soft_whitening_main,448,2910,1379,spearman_x100,54.7141,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LPP,896,2910,1379,spearman_x100,38.8712,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Random,896,2910,1379,spearman_x100,41.1859,QR of Gaussian,42.0
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,ABTT_PCA_r,896,2910,1379,spearman_x100,47.1986,m=5,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Soft_whitening_main,896,2910,1379,spearman_x100,56.2593,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,LPP,1792,2910,1379,spearman_x100,40.8079,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Random,1792,2910,1379,spearman_x100,41.3807,QR of Gaussian,42.0
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,ABTT_PCA_r,1792,2910,1379,spearman_x100,48.0288,m=5,
+stsb,test,qwen-8b,Qwen/Qwen2-7B,mean_pool,Soft_whitening_main,1792,2910,1379,spearman_x100,57.9216,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Base_mean_pool,4096,2910,1379,spearman_x100,45.888,full dim; sanity check vs existing table,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_full,4096,2910,1379,spearman_x100,56.6516,m=5,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LPP,4,2910,1379,spearman_x100,20.1303,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Random,4,2910,1379,spearman_x100,29.0023,QR of Gaussian,42.0
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,4,2910,1379,spearman_x100,29.4861,m=5,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Soft_whitening_main,4,2910,1379,spearman_x100,23.3696,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LPP,8,2910,1379,spearman_x100,27.2845,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Random,8,2910,1379,spearman_x100,39.5199,QR of Gaussian,42.0
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,8,2910,1379,spearman_x100,38.2567,m=5,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Soft_whitening_main,8,2910,1379,spearman_x100,28.0448,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LPP,16,2910,1379,spearman_x100,33.6997,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Random,16,2910,1379,spearman_x100,43.0021,QR of Gaussian,42.0
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,16,2910,1379,spearman_x100,43.1913,m=5,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Soft_whitening_main,16,2910,1379,spearman_x100,38.9541,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LPP,32,2910,1379,spearman_x100,36.9683,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Random,32,2910,1379,spearman_x100,44.2709,QR of Gaussian,42.0
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,32,2910,1379,spearman_x100,45.4264,m=5,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Soft_whitening_main,32,2910,1379,spearman_x100,42.4608,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LPP,64,2910,1379,spearman_x100,39.5732,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Random,64,2910,1379,spearman_x100,48.1328,QR of Gaussian,42.0
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,64,2910,1379,spearman_x100,47.8916,m=5,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Soft_whitening_main,64,2910,1379,spearman_x100,48.6546,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LPP,128,2910,1379,spearman_x100,41.7378,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Random,128,2910,1379,spearman_x100,47.1327,QR of Gaussian,42.0
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,128,2910,1379,spearman_x100,50.0651,m=5,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Soft_whitening_main,128,2910,1379,spearman_x100,52.9143,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LPP,256,2910,1379,spearman_x100,43.3137,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Random,256,2910,1379,spearman_x100,48.8486,QR of Gaussian,42.0
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,256,2910,1379,spearman_x100,51.7158,m=5,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Soft_whitening_main,256,2910,1379,spearman_x100,56.1593,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LPP,512,2910,1379,spearman_x100,44.5191,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Random,512,2910,1379,spearman_x100,49.9877,QR of Gaussian,42.0
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,512,2910,1379,spearman_x100,53.1866,m=5,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Soft_whitening_main,512,2910,1379,spearman_x100,58.4068,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LPP,1024,2910,1379,spearman_x100,45.8372,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Random,1024,2910,1379,spearman_x100,49.9201,QR of Gaussian,42.0
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,1024,2910,1379,spearman_x100,54.3898,m=5,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Soft_whitening_main,1024,2910,1379,spearman_x100,60.4959,eigenvalue shrinkage alpha=0.1 (main-runner formula),
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,LPP,2048,2910,1379,spearman_x100,48.6991,n_neighbors=10 binary affinity ridge=0.001,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Random,2048,2910,1379,spearman_x100,49.8501,QR of Gaussian,42.0
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,2048,2910,1379,spearman_x100,55.5323,m=5,
+stsb,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Soft_whitening_main,2048,2910,1379,spearman_x100,62.5461,eigenvalue shrinkage alpha=0.1 (main-runner formula),

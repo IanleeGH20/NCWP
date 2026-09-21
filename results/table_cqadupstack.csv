@@ -1,0 +1,121 @@
+dataset,split,model_nickname,hf_model_id,embedding_type,method,r,seed,metric_name,metric_value,notes,fit_size,eval_size,std_if_available
+cqa-avg,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Base_mean_pool,2560,"[42, 43, 44]",ndcg@10_avg,5.7523,avg over 3 subforums,,,
+cqa-avg,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_full,2560,"[42, 43, 44]",ndcg@10_avg,9.2952,avg over 3 subforums,,,
+cqa-avg,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ZCA_shrink_full,2560,"[42, 43, 44]",ndcg@10_avg,23.5038,avg over 3 subforums,,,
+cqa-avg,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,PCA_whitening,40,"[42, 43, 44]",ndcg@10_avg,3.0995,avg over 3 subforums,,,
+cqa-avg,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,40,"[42, 43, 44]",ndcg@10_avg,2.8192,avg over 3 subforums,,,
+cqa-avg,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,40,"[42, 43, 44]",ndcg@10_avg,2.9486,avg over 3 subforums,,,
+cqa-avg,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,PCA_whitening,80,"[42, 43, 44]",ndcg@10_avg,6.2746,avg over 3 subforums,,,
+cqa-avg,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,80,"[42, 43, 44]",ndcg@10_avg,4.1008,avg over 3 subforums,,,
+cqa-avg,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,80,"[42, 43, 44]",ndcg@10_avg,6.8885,avg over 3 subforums,,,
+cqa-avg,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,PCA_whitening,160,"[42, 43, 44]",ndcg@10_avg,10.8195,avg over 3 subforums,,,
+cqa-avg,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,160,"[42, 43, 44]",ndcg@10_avg,5.4595,avg over 3 subforums,,,
+cqa-avg,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,160,"[42, 43, 44]",ndcg@10_avg,12.9515,avg over 3 subforums,,,
+cqa-avg,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,PCA_whitening,320,"[42, 43, 44]",ndcg@10_avg,15.3488,avg over 3 subforums,,,
+cqa-avg,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,320,"[42, 43, 44]",ndcg@10_avg,6.5145,avg over 3 subforums,,,
+cqa-avg,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,320,"[42, 43, 44]",ndcg@10_avg,17.6609,avg over 3 subforums,,,
+cqa-english,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Base_mean_pool,2560,"[42, 43, 44]",ndcg@10,3.7517,full dim,1000.0,1570.0,
+cqa-english,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_full,2560,"[42, 43, 44]",ndcg@10,8.2508,m=5,1000.0,1570.0,
+cqa-english,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ZCA_shrink_full,2560,"[42, 43, 44]",ndcg@10,25.1653,full-dim ZCA-only rank_deficient_n<D,1000.0,1570.0,
+cqa-english,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,PCA_whitening,40,"[42, 43, 44]",ndcg@10,2.0845,,1000.0,1570.0,
+cqa-english,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,40,"[42, 43, 44]",ndcg@10,1.9652,m=5,1000.0,1570.0,
+cqa-english,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,40,"[42, 43, 44]",ndcg@10,3.7321,ncwp_ref,1000.0,1570.0,0.3743
+cqa-english,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,PCA_whitening,80,"[42, 43, 44]",ndcg@10,5.4125,,1000.0,1570.0,
+cqa-english,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,80,"[42, 43, 44]",ndcg@10,2.9853,m=5,1000.0,1570.0,
+cqa-english,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,80,"[42, 43, 44]",ndcg@10,7.8546,ncwp_ref,1000.0,1570.0,0.481
+cqa-english,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,PCA_whitening,160,"[42, 43, 44]",ndcg@10,10.195,,1000.0,1570.0,
+cqa-english,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,160,"[42, 43, 44]",ndcg@10,4.1925,m=5,1000.0,1570.0,
+cqa-english,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,160,"[42, 43, 44]",ndcg@10,14.3062,ncwp_ref,1000.0,1570.0,0.547
+cqa-english,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,PCA_whitening,320,"[42, 43, 44]",ndcg@10,15.7744,,1000.0,1570.0,
+cqa-english,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,320,"[42, 43, 44]",ndcg@10,5.2939,m=5,1000.0,1570.0,
+cqa-english,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,320,"[42, 43, 44]",ndcg@10,19.1673,ncwp_ref,1000.0,1570.0,0.4501
+cqa-gaming,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Base_mean_pool,2560,"[42, 43, 44]",ndcg@10,6.3328,full dim,1000.0,1595.0,
+cqa-gaming,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_full,2560,"[42, 43, 44]",ndcg@10,8.9643,m=5,1000.0,1595.0,
+cqa-gaming,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ZCA_shrink_full,2560,"[42, 43, 44]",ndcg@10,23.7364,full-dim ZCA-only rank_deficient_n<D,1000.0,1595.0,
+cqa-gaming,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,PCA_whitening,40,"[42, 43, 44]",ndcg@10,3.1563,,1000.0,1595.0,
+cqa-gaming,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,40,"[42, 43, 44]",ndcg@10,2.5721,m=5,1000.0,1595.0,
+cqa-gaming,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,40,"[42, 43, 44]",ndcg@10,2.3485,ncwp_ref,1000.0,1595.0,0.3261
+cqa-gaming,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,PCA_whitening,80,"[42, 43, 44]",ndcg@10,6.3581,,1000.0,1595.0,
+cqa-gaming,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,80,"[42, 43, 44]",ndcg@10,3.7866,m=5,1000.0,1595.0,
+cqa-gaming,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,80,"[42, 43, 44]",ndcg@10,5.6034,ncwp_ref,1000.0,1595.0,0.1669
+cqa-gaming,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,PCA_whitening,160,"[42, 43, 44]",ndcg@10,11.0787,,1000.0,1595.0,
+cqa-gaming,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,160,"[42, 43, 44]",ndcg@10,5.2819,m=5,1000.0,1595.0,
+cqa-gaming,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,160,"[42, 43, 44]",ndcg@10,11.6803,ncwp_ref,1000.0,1595.0,0.3454
+cqa-gaming,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,PCA_whitening,320,"[42, 43, 44]",ndcg@10,15.5095,,1000.0,1595.0,
+cqa-gaming,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,320,"[42, 43, 44]",ndcg@10,6.1149,m=5,1000.0,1595.0,
+cqa-gaming,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,320,"[42, 43, 44]",ndcg@10,16.9568,ncwp_ref,1000.0,1595.0,0.1189
+cqa-physics,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,Base_mean_pool,2560,"[42, 43, 44]",ndcg@10,7.1725,full dim,1000.0,1039.0,
+cqa-physics,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_full,2560,"[42, 43, 44]",ndcg@10,10.6704,m=5,1000.0,1039.0,
+cqa-physics,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ZCA_shrink_full,2560,"[42, 43, 44]",ndcg@10,21.6097,full-dim ZCA-only rank_deficient_n<D,1000.0,1039.0,
+cqa-physics,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,PCA_whitening,40,"[42, 43, 44]",ndcg@10,4.0576,,1000.0,1039.0,
+cqa-physics,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,40,"[42, 43, 44]",ndcg@10,3.9202,m=5,1000.0,1039.0,
+cqa-physics,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,40,"[42, 43, 44]",ndcg@10,2.7651,ncwp_ref,1000.0,1039.0,0.2899
+cqa-physics,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,PCA_whitening,80,"[42, 43, 44]",ndcg@10,7.0533,,1000.0,1039.0,
+cqa-physics,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,80,"[42, 43, 44]",ndcg@10,5.5305,m=5,1000.0,1039.0,
+cqa-physics,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,80,"[42, 43, 44]",ndcg@10,7.2075,ncwp_ref,1000.0,1039.0,0.0853
+cqa-physics,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,PCA_whitening,160,"[42, 43, 44]",ndcg@10,11.1849,,1000.0,1039.0,
+cqa-physics,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,160,"[42, 43, 44]",ndcg@10,6.9041,m=5,1000.0,1039.0,
+cqa-physics,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,160,"[42, 43, 44]",ndcg@10,12.868,ncwp_ref,1000.0,1039.0,0.0871
+cqa-physics,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,PCA_whitening,320,"[42, 43, 44]",ndcg@10,14.7626,,1000.0,1039.0,
+cqa-physics,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,ABTT_PCA_r,320,"[42, 43, 44]",ndcg@10,8.1346,m=5,1000.0,1039.0,
+cqa-physics,test,qwen-4b,Qwen/Qwen1.5-4B,mean_pool,NCWP_mean_pool,320,"[42, 43, 44]",ndcg@10,16.8585,ncwp_ref,1000.0,1039.0,0.3064
+cqa-avg,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Base_mean_pool,4096,"[42, 43, 44]",ndcg@10_avg,6.0637,avg over 3 subforums,,,
+cqa-avg,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_full,4096,"[42, 43, 44]",ndcg@10_avg,9.3038,avg over 3 subforums,,,
+cqa-avg,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ZCA_shrink_full,4096,"[42, 43, 44]",ndcg@10_avg,25.4121,avg over 3 subforums,,,
+cqa-avg,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,PCA_whitening,32,"[42, 43, 44]",ndcg@10_avg,1.4185,avg over 3 subforums,,,
+cqa-avg,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,32,"[42, 43, 44]",ndcg@10_avg,1.4937,avg over 3 subforums,,,
+cqa-avg,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,32,"[42, 43, 44]",ndcg@10_avg,1.9315,avg over 3 subforums,,,
+cqa-avg,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,PCA_whitening,64,"[42, 43, 44]",ndcg@10_avg,3.2364,avg over 3 subforums,,,
+cqa-avg,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,64,"[42, 43, 44]",ndcg@10_avg,2.5931,avg over 3 subforums,,,
+cqa-avg,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,64,"[42, 43, 44]",ndcg@10_avg,5.8001,avg over 3 subforums,,,
+cqa-avg,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,PCA_whitening,128,"[42, 43, 44]",ndcg@10_avg,7.3,avg over 3 subforums,,,
+cqa-avg,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,128,"[42, 43, 44]",ndcg@10_avg,3.7879,avg over 3 subforums,,,
+cqa-avg,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,128,"[42, 43, 44]",ndcg@10_avg,11.0089,avg over 3 subforums,,,
+cqa-avg,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,PCA_whitening,256,"[42, 43, 44]",ndcg@10_avg,12.6292,avg over 3 subforums,,,
+cqa-avg,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,256,"[42, 43, 44]",ndcg@10_avg,5.0042,avg over 3 subforums,,,
+cqa-avg,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,256,"[42, 43, 44]",ndcg@10_avg,16.295,avg over 3 subforums,,,
+cqa-english,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Base_mean_pool,4096,"[42, 43, 44]",ndcg@10,3.88,full dim,1000.0,1570.0,
+cqa-english,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_full,4096,"[42, 43, 44]",ndcg@10,11.7742,m=5,1000.0,1570.0,
+cqa-english,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ZCA_shrink_full,4096,"[42, 43, 44]",ndcg@10,28.4709,full-dim ZCA-only rank_deficient_n<D,1000.0,1570.0,
+cqa-english,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,PCA_whitening,32,"[42, 43, 44]",ndcg@10,0.9195,,1000.0,1570.0,
+cqa-english,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,32,"[42, 43, 44]",ndcg@10,1.548,m=5,1000.0,1570.0,
+cqa-english,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,32,"[42, 43, 44]",ndcg@10,2.3349,ncwp_ref,1000.0,1570.0,0.2729
+cqa-english,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,PCA_whitening,64,"[42, 43, 44]",ndcg@10,2.9562,,1000.0,1570.0,
+cqa-english,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,64,"[42, 43, 44]",ndcg@10,2.9507,m=5,1000.0,1570.0,
+cqa-english,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,64,"[42, 43, 44]",ndcg@10,6.4833,ncwp_ref,1000.0,1570.0,0.1077
+cqa-english,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,PCA_whitening,128,"[42, 43, 44]",ndcg@10,7.292,,1000.0,1570.0,
+cqa-english,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,128,"[42, 43, 44]",ndcg@10,4.5108,m=5,1000.0,1570.0,
+cqa-english,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,128,"[42, 43, 44]",ndcg@10,12.1754,ncwp_ref,1000.0,1570.0,0.3023
+cqa-english,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,PCA_whitening,256,"[42, 43, 44]",ndcg@10,12.9945,,1000.0,1570.0,
+cqa-english,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,256,"[42, 43, 44]",ndcg@10,6.2675,m=5,1000.0,1570.0,
+cqa-english,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,256,"[42, 43, 44]",ndcg@10,17.3123,ncwp_ref,1000.0,1570.0,0.5711
+cqa-gaming,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Base_mean_pool,4096,"[42, 43, 44]",ndcg@10,5.6791,full dim,1000.0,1595.0,
+cqa-gaming,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_full,4096,"[42, 43, 44]",ndcg@10,8.6045,m=5,1000.0,1595.0,
+cqa-gaming,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ZCA_shrink_full,4096,"[42, 43, 44]",ndcg@10,23.7235,full-dim ZCA-only rank_deficient_n<D,1000.0,1595.0,
+cqa-gaming,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,PCA_whitening,32,"[42, 43, 44]",ndcg@10,1.5894,,1000.0,1595.0,
+cqa-gaming,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,32,"[42, 43, 44]",ndcg@10,1.7639,m=5,1000.0,1595.0,
+cqa-gaming,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,32,"[42, 43, 44]",ndcg@10,1.6645,ncwp_ref,1000.0,1595.0,0.3221
+cqa-gaming,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,PCA_whitening,64,"[42, 43, 44]",ndcg@10,3.4674,,1000.0,1595.0,
+cqa-gaming,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,64,"[42, 43, 44]",ndcg@10,3.0333,m=5,1000.0,1595.0,
+cqa-gaming,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,64,"[42, 43, 44]",ndcg@10,4.8733,ncwp_ref,1000.0,1595.0,0.4425
+cqa-gaming,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,PCA_whitening,128,"[42, 43, 44]",ndcg@10,6.9213,,1000.0,1595.0,
+cqa-gaming,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,128,"[42, 43, 44]",ndcg@10,4.0958,m=5,1000.0,1595.0,
+cqa-gaming,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,128,"[42, 43, 44]",ndcg@10,9.2145,ncwp_ref,1000.0,1595.0,1.0872
+cqa-gaming,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,PCA_whitening,256,"[42, 43, 44]",ndcg@10,11.6623,,1000.0,1595.0,
+cqa-gaming,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,256,"[42, 43, 44]",ndcg@10,5.0544,m=5,1000.0,1595.0,
+cqa-gaming,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,256,"[42, 43, 44]",ndcg@10,15.4405,ncwp_ref,1000.0,1595.0,0.4484
+cqa-physics,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,Base_mean_pool,4096,"[42, 43, 44]",ndcg@10,8.632,full dim,1000.0,1039.0,
+cqa-physics,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_full,4096,"[42, 43, 44]",ndcg@10,7.5327,m=5,1000.0,1039.0,
+cqa-physics,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ZCA_shrink_full,4096,"[42, 43, 44]",ndcg@10,24.0419,full-dim ZCA-only rank_deficient_n<D,1000.0,1039.0,
+cqa-physics,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,PCA_whitening,32,"[42, 43, 44]",ndcg@10,1.7465,,1000.0,1039.0,
+cqa-physics,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,32,"[42, 43, 44]",ndcg@10,1.1692,m=5,1000.0,1039.0,
+cqa-physics,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,32,"[42, 43, 44]",ndcg@10,1.7952,ncwp_ref,1000.0,1039.0,0.1644
+cqa-physics,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,PCA_whitening,64,"[42, 43, 44]",ndcg@10,3.2857,,1000.0,1039.0,
+cqa-physics,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,64,"[42, 43, 44]",ndcg@10,1.7952,m=5,1000.0,1039.0,
+cqa-physics,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,64,"[42, 43, 44]",ndcg@10,6.0437,ncwp_ref,1000.0,1039.0,0.3135
+cqa-physics,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,PCA_whitening,128,"[42, 43, 44]",ndcg@10,7.6866,,1000.0,1039.0,
+cqa-physics,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,128,"[42, 43, 44]",ndcg@10,2.7572,m=5,1000.0,1039.0,
+cqa-physics,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,128,"[42, 43, 44]",ndcg@10,11.6367,ncwp_ref,1000.0,1039.0,0.6588
+cqa-physics,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,PCA_whitening,256,"[42, 43, 44]",ndcg@10,13.2308,,1000.0,1039.0,
+cqa-physics,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,ABTT_PCA_r,256,"[42, 43, 44]",ndcg@10,3.6908,m=5,1000.0,1039.0,
+cqa-physics,test,llama-8b,meta-llama/Meta-Llama-3.1-8B,mean_pool,NCWP_mean_pool,256,"[42, 43, 44]",ndcg@10,16.1321,ncwp_ref,1000.0,1039.0,0.7034
