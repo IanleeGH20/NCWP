@@ -84,6 +84,9 @@ pip install torch --index-url https://download.pytorch.org/whl/cu118   # match y
 pip install -r requirements.txt
 export HF_TOKEN=hf_xxx
 ```
+
+Verified on Python 3.10 with the torch this command currently resolves to
+(2.7.1+cu118); any CUDA-matched torch >= 2.3 works.
 </details>
 
 All commands below are run from the repository root as Python modules

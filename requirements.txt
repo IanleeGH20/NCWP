@@ -1,7 +1,8 @@
 # torch is provided by the base image (pytorch/pytorch:2.3.0-cuda11.8-cudnn8-devel).
-# For a non-Docker install, install a CUDA-matched torch 2.3.x FIRST, then these.
+# For a non-Docker install, install a CUDA-matched torch (>= 2.3) FIRST, then these.
+# Verified with torch 2.3.0 (Docker image) and torch 2.7.1+cu118 (venv install).
 #
-# Versions are pinned to the set the paper was produced and verified with.
+# The rest are pinned to the set the paper was produced and verified with.
 # NOTE: transformers is capped below 5.0 on purpose — transformers>=5 requires
 # torch>=2.5 and would silently disable PyTorch on the torch-2.3 base image.
 transformers==4.44.0
